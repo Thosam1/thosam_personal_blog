@@ -5,12 +5,6 @@ import BlogLayout from "../../layouts/blog";
 import MDXComponents from "../../components/MDXComponents";
 
 
-// import rehypeSlug from 'rehype-slug'
-// import rehypeHighlight from 'rehype-highlight'
-// import rehypeCodeTitles from 'rehype-code-titles'
-// import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-
-
 // basic idea here : website/blog/slug -> it renders goes and gets the mdx file corresponding to the slug, then renders it
 
 export default function Blog({ mdxSource, frontMatter }) {
