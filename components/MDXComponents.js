@@ -3,6 +3,7 @@
 // we declare custom components, then import all in MDXComponents at the end and we export
 
 /** @jsxRuntime classic */
+// /** @jsx jsx */
 import React from 'react'
 import {
   Box,
@@ -12,10 +13,10 @@ import {
   Link,
   Text,
   Divider,
-  useColorMode,
-} from "@chakra-ui/react";
-import { jsx } from "@emotion/react";
-import NextLink from "next/link";
+  useColorMode
+} from '@chakra-ui/react';
+import { jsx } from '@emotion/react'
+import NextLink from 'next/link'
 
 // Link component
 const CustomLink = (props) => {

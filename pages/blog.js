@@ -70,7 +70,9 @@ export default function Blog({ posts }) {
                 <SearchIcon color="gray.300" />
               </InputRightElement>
             </InputGroup>
+
             {!filteredBlogPosts.length && "No posts found :("}
+            
             {filteredBlogPosts.map((frontMatter) => (
               <BlogPost key={frontMatter.title} {...frontMatter} />
             ))}
