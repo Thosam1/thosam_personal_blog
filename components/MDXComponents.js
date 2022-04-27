@@ -3,7 +3,7 @@
 // we declare custom components, then import all in MDXComponents at the end and we export
 
 /** @jsxRuntime classic */
-// /** @jsx jsx */
+/** @jsx jsx */
 import React from 'react'
 import {
   Box,
@@ -144,5 +144,4 @@ const MDXComponents = {
   blockquote: Quote,
 };
 
-export { CustomLink };
 export default MDXComponents;
