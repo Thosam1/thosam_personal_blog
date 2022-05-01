@@ -34,11 +34,6 @@ export default function Index() {
     dark: "gray.400",
   };
 
-  // for links
-  const linkColor = {
-    light: "blue.400",
-    dark: "blue.600",
-  };
 
   return (
     <Container>

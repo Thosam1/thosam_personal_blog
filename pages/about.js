@@ -1,5 +1,4 @@
 /* About me - page */
-
 import Head from "next/head";
 
 // more chakra ui elements
@@ -31,7 +30,6 @@ import { motion } from "framer-motion";
 
 // icons
 import { FiMail } from "react-icons/fi";
-import Footer from "../components/Footer";
 
 const About = () => {
   // for customizing based on light mode vs dark mode -> dynamically
@@ -55,6 +53,9 @@ const About = () => {
 
   return (
     <Container>
+      <Head>
+        <title>About me - Thösam Norlha-Tsang</title>
+      </Head>
       <Flex
         w="100%"
         // h="400px"
@@ -124,7 +125,6 @@ const About = () => {
               Contact me
             </Link>
           </Button>
-
         </Flex>
         {/* youtube featured video */}
         <Box mt={[10, 10, 0]} w={["100%", "100%", "50%"]}>
