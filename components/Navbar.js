@@ -83,7 +83,7 @@ const Navbar = () => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/about" passHref>
             <Button
               as="a"
               variant="ghost"
@@ -93,14 +93,14 @@ const Navbar = () => {
               About
             </Button>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/portfolio" passHref>
             <Button
               as="a"
               variant="ghost"
               p={[1, 2, 4]}
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
             >
-              Works
+              Portfolio
             </Button>
           </NextLink>
           <NextLink href="/blog" passHref>
@@ -113,7 +113,7 @@ const Navbar = () => {
               Blog
             </Button>
           </NextLink>
-          <NextLink href="/" passHref>
+          {/* <NextLink href="/youtube" passHref>
             <Button
               as="a"
               variant="ghost"
@@ -122,8 +122,8 @@ const Navbar = () => {
             >
               Youtube
             </Button>
-          </NextLink>
-          <NextLink href="/" passHref>
+          </NextLink> */}
+          {/* <NextLink href="/stats" passHref>
             <Button
               as="a"
               variant="ghost"
@@ -132,7 +132,7 @@ const Navbar = () => {
             >
               Stats
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
         <DarkModeSwitch />
       </StickyNav>

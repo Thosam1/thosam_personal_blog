@@ -86,7 +86,7 @@ const Footer = () => {
             />
           </Link>
           <Link
-            href="mailto:ben@carlsontechnologies.dev"
+            href="mailto:thosamthosamthosam@gmail.com"
             title="Email"
             isExternal
           >
