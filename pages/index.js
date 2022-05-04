@@ -21,6 +21,7 @@ import {
 
 // components
 import Container from "../components/Container"; // wrapper of pages
+import ProjectCards from "../components/ProjectCards";
 
 // animations
 import { motion } from "framer-motion";
@@ -85,7 +86,7 @@ export default function Index() {
               data-splitbee-event-type="Resume"
               mt={5}
             >
-                My works
+                My works 💻
               </Button>
             </Link>
           </Stack>
@@ -156,7 +157,7 @@ export default function Index() {
                 mt={5}
                 mb={10}
               >
-                More about me
+                More about me 😁
               </Button>
             </Link>
           </Box>
@@ -174,13 +175,15 @@ export default function Index() {
               Featured Projects
             </Heading>
 
+            <ProjectCards featured={true}/>
+
             <Button
               data-splitbee-event="Button Click"
               data-splitbee-event-type="Resume"
               mt={5}
               mb={10}
             >
-              Check out my Portfolio
+              Wanna see more ? 😄
             </Button>
           </Box>
         </Flex>

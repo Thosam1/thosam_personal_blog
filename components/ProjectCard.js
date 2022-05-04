@@ -32,7 +32,6 @@ export default function ProjectCard({
           rounded={"25px"}
           p={6}
           overflow={"hidden"}
-          // border="0px"
         >
           {/* rendering all images in a carousel */}
           <Box

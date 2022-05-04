@@ -12,7 +12,8 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/ecommerce_image.png',
-            ]
+            ],
+            featured: false
         },
         {
             title: 'Pacman - Save PacWoman',
@@ -25,7 +26,8 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/pacman_lv2.png',
-            ]
+            ],
+            featured: true
         },
         {
             title: 'Tchu',
@@ -38,7 +40,8 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/tchu_image.png',
-            ]
+            ],
+            featured: true
         },
         {
             title: 'First Portfolio Website',
@@ -52,7 +55,8 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/portfolio_image.png',
-            ]
+            ],
+            featured: false
         },
         {
             title: 'First Blog Website',
@@ -66,7 +70,8 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/first_blog.png',
-            ]
+            ],
+            featured: false
         },
         {
             title: 'Personal Web App 🔥',
@@ -80,7 +85,8 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/bg_personal_website.png'
-            ]
+            ],
+            featured: false
         },
     ];
 }

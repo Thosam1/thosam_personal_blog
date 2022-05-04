@@ -10,6 +10,7 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  Text
 } from "@chakra-ui/react";
 
 // custom components
@@ -58,13 +59,21 @@ export default function Blog({ posts }) {
             px={4}
           >
             <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-              Blog ({posts.length} posts)
-            </Heading>
-            <InputGroup mb={4} mr={4} w="100%">
+              My blog 📝
+            </Heading> 
+            {/* <Text>
+            ({posts.length} posts)
+            </Text> */}
+            <InputGroup mb={4} mr={4} w="100%" alignContent={"center"}>
               <Input
                 aria-label="Search by title"
                 placeholder="Search by title"
                 onChange={(e) => setSearchValue(e.target.value)}
+                variant='unstyled'
+                // border="1px"
+                p="15px"
+                bg={"blackAlpha.500"}
+                borderRadius="10px"
               />
               <InputRightElement>
                 <SearchIcon color="gray.300" />
