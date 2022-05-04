@@ -185,7 +185,7 @@ const Portfolio = () => {
           </Box>
 
           {/* Tech Stack */}
-          <Box as="section" mt={10} mb={10}>
+          <Box as="section" mt={10} mb={10} alignSelf={"center"}>
             <Heading
               letterSpacing="tight"
               mt={8}
@@ -242,6 +242,21 @@ const Portfolio = () => {
             >
               Contact Me
             </Heading>
+
+            <Link
+              href="mailto:thosamthosamthosam@gmail.com"
+              title="Email"
+              isExternal
+            >
+              <Button
+                data-splitbee-event="Button Click"
+                data-splitbee-event-type="Resume"
+                mt={5}
+                leftIcon={<FiMail />}
+              >
+                Contact me
+              </Button>
+            </Link>
           </Box>
         </Flex>
       </Stack>
