@@ -75,17 +75,20 @@ export default function Index() {
             .
           </Text>
           
+          <Stack direction={"row"} align={"center"}>
+            <Link
+              href="/portfolio"
+              title="portfolio"
+            >
             <Button
               data-splitbee-event="Button Click"
               data-splitbee-event-type="Resume"
               mt={5}
-              mb={10}
-              maxW="120px"
             >
-              <Link href="/portfolio">
-              My works
-              </Link>
-            </Button>
+                My works
+              </Button>
+            </Link>
+          </Stack>
           
         </Flex>
         {/* youtube featured video */}

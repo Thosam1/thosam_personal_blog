@@ -22,6 +22,7 @@ import {
 // components
 import Container from "../components/Container"; // wrapper of pages
 import SkillCards from "../components/SkillCards";
+import ProjectCards from "../components/ProjectCards";
 
 // animations
 import { motion } from "framer-motion";
@@ -29,6 +30,7 @@ import { motion } from "framer-motion";
 // icon
 import { GrBlockQuote } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
+import ProjectCard from "../components/ProjectCard";
 
 const Portfolio = () => {
   const { colorMode } = useColorMode();
@@ -66,35 +68,32 @@ const Portfolio = () => {
             This is the portfolio page of my personal website !
           </Text>
 
-          <Flex>
-            <Button
-              data-splitbee-event="Button Click"
-              data-splitbee-event-type="Resume"
-              mt={5}
-              mb={10}
-              mr={25}
-              maxW="120px"
-            >
-              <Link href="/portfolio">My works</Link>
-            </Button>
+          <Stack direction={"row"} align={"center"} spacing={4}>
+            <Link href="/portfolio">
+              <Button
+                data-splitbee-event="Button Click"
+                data-splitbee-event-type="Resume"
+                mt={5}
+              >
+                My works
+              </Button>
+            </Link>
 
-            <Button
-              data-splitbee-event="Button Click"
-              data-splitbee-event-type="Resume"
-              mt={5}
-              mb={10}
-              maxW="140px"
-              leftIcon={<FiMail />}
+            <Link
+              href="mailto:thosamthosamthosam@gmail.com"
+              title="Email"
+              isExternal
             >
-              <Link
-                href="mailto:thosamthosamthosam@gmail.com"
-                title="Email"
-                isExternal
+              <Button
+                data-splitbee-event="Button Click"
+                data-splitbee-event-type="Resume"
+                mt={5}
+                leftIcon={<FiMail />}
               >
                 Contact me
-              </Link>
-            </Button>
-          </Flex>
+              </Button>
+            </Link>
+          </Stack>
         </Flex>
         {/* youtube featured video */}
         <Box mt={[10, 10, 0]} w={["100%", "100%", "50%"]}>
@@ -214,7 +213,7 @@ const Portfolio = () => {
               Projects
             </Heading>
 
-            <SkillCards />
+            <ProjectCards />
           </Box>
 
           {/* Education */}
@@ -227,10 +226,22 @@ const Portfolio = () => {
               as="h2"
               mb={7}
             >
-              Contact me
+              Education
             </Heading>
+          </Box>
 
-            <SkillCards />
+          {/* Contact Me */}
+          <Box as="section" mt={10} mb={10}>
+            <Heading
+              letterSpacing="tight"
+              mt={8}
+              size="lg"
+              fontWeight={700}
+              as="h2"
+              mb={7}
+            >
+              Contact Me
+            </Heading>
           </Box>
         </Flex>
       </Stack>

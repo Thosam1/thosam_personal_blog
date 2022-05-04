@@ -1,6 +1,6 @@
 import { SimpleGrid, Container } from "@chakra-ui/react";
 import { MotionBox } from "./MotionBox";
-import skillsList from "../data/portfolio/skills/skillsList";
+import skillsList from "../data/portfolio/skillsList";
 import SkillCard from "./SkillCard";
 
 const container = {
@@ -19,12 +19,12 @@ const SkillCards = () => {
   return (
       <MotionBox variants={container} initial="hidden" animate="visible">
         <SimpleGrid columns={[1, 1, 2]} spacing={4}>
-          {skillsList().map((tool, index) => (
+          {skillsList().map((object, index) => (
             <SkillCard
               key={index}
-              name={tool.name}
-              description={tool.description}
-              image={tool.image}
+              name={object.name}
+              description={object.description}
+              image={object.image}
             //   link={tool.link}
             />
           ))}

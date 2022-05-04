@@ -109,22 +109,22 @@ const About = () => {
             on a bed and be able to run, jump, and battle with swords.
           </Text>
 
-          <Button
-            data-splitbee-event="Button Click"
-            data-splitbee-event-type="Resume"
-            mt={5}
-            mb={10}
-            maxW="140px"
-            leftIcon={<FiMail />}
-          >
+          <Stack direction={"row"} align={"center"}>
             <Link
               href="mailto:thosamthosamthosam@gmail.com"
               title="Email"
               isExternal
             >
-              Contact me
+              <Button
+                data-splitbee-event="Button Click"
+                data-splitbee-event-type="Resume"
+                mt={5}
+                leftIcon={<FiMail />}
+              >
+                Contact me
+              </Button>
             </Link>
-          </Button>
+          </Stack>
         </Flex>
         {/* youtube featured video */}
         <Box mt={[10, 10, 0]} w={["100%", "100%", "50%"]}>

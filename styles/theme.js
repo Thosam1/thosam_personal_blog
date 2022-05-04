@@ -22,6 +22,7 @@ const breakpoints = createBreakpoints({
 // we add our extensions there
 const overrides = {
   ...chakraTheme,
+  initialColorMode: 'dark', // i don't think this works...
   fonts,
   breakpoints,
   fontWeights: {
