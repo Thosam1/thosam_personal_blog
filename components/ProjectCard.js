@@ -32,11 +32,11 @@ export default function ProjectCard({
           rounded={"25px"}
           p={6}
           overflow={"hidden"}
+          // border="0px"
         >
           {/* rendering all images in a carousel */}
           <Box
             h={"320px"}
-            bg={"gray.100"}
             mt={-6}
             mx={-6}
             mb={6}
