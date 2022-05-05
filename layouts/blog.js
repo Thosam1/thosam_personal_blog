@@ -37,6 +37,7 @@ export default function BlogLayout({ children, frontMatter }) {
       <Head>
         <title>${slug} - Blog - Thösam Norlha-Tsang</title>
       </Head>
+      
       <Stack
         as="article"
         spacing={8}

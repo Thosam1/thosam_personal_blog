@@ -21,7 +21,7 @@ const Container = ({ children }) => {
   const { colorMode } = useColorMode();
 
   const bgColor = {
-    light: "white",
+    light: "#F7FAFC",
     dark: "#171717",
   };
 

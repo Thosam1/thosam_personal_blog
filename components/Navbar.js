@@ -32,7 +32,7 @@ const Navbar = () => {
   const { colorMode } = useColorMode();
 
   const bgColor = {
-    light: "wite",
+    light: "#F7FAFC",
     dark: "#171717",
   };
 
