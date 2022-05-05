@@ -7,15 +7,21 @@ import { useColorMode, Flex, Button, Box } from "@chakra-ui/react";
 import { FaRocket } from "react-icons/fa";
 
 // animation
-import { motion } from "framer-motion"; // would be nice to make the logo vertical and animate to the top if clicked
+import { motion, AnimatePresence } from "framer-motion"; // would be nice to make the logo vertical and animate to the top if clicked
 
 const ScrollTopButton = () => {
-  const [visible, setVisible] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   // otherwise we get window is not defined error
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
-  });
+    const updatePosition = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+
+    window.addEventListener("scroll", updatePosition);
+
+    return () => window.removeEventListener("scroll", updatePosition);
+  }, []);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -27,7 +33,8 @@ const ScrollTopButton = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({
+    document.documentElement.scrollTo({
+      // or window.scrollTo()
       top: 0,
       behavior: "smooth",
       /* you can also use 'auto' behaviour
@@ -36,14 +43,34 @@ const ScrollTopButton = () => {
   };
 
   return (
-    <Box position="fixed" bottom="50px" right={["16px", "100px"]} zIndex={2}>
-        <Button
-          style={{ display: visible ? "inline" : "none" }}
-          onClick={scrollToTop}
+    <AnimatePresence>
+      {scrollPosition > 100 && (
+        <Box
+          position="fixed"
+          bottom="50px"
+          right={["16px", "100px"]}
+          zIndex={2}
         >
-          <FaRocket />
-        </Button>
-    </Box>
+          <motion.button
+            onClick={scrollToTop}
+              className="scrollToTop-btn"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, transition: { duration: 1.2 } }}
+              exit={{ y: -400, opacity: 0, transition: { duration: 0.6 } }}
+            whileHover={{
+              scale: 1.2,
+              rotate: -45,
+              transition: { duration: 0.2 },
+            }}
+              whileTap={{ scale: 1.5 }}
+          >
+            <Button>
+              <FaRocket />
+            </Button>
+          </motion.button>
+        </Box>
+      )}
+    </AnimatePresence>
   );
 };
 
