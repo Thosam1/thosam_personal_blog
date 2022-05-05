@@ -34,13 +34,7 @@ export default function ProjectCard({
           overflow={"hidden"}
         >
           {/* rendering all images in a carousel */}
-          <Box
-            h={"320px"}
-            mt={-6}
-            mx={-6}
-            mb={6}
-            pos={"relative"}
-          >
+          <Box h={"320px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
             <Image src={images[0]} objectFit="cover" layout={"fill"} />
           </Box>
 
@@ -70,17 +64,21 @@ export default function ProjectCard({
             <Text color={"gray.500"}>{description}</Text>
           </Stack>
           <Stack mt={6} direction={"row"} spacing={6} align={"center"}>
-            <Link href={demoLink} isExternal>
-              <Stack direction={"row"} align={"center"}>
-                <Text fontWeight={600}>View Demo</Text> <FiLink />
-              </Stack>
-            </Link>
+            {demoLink && (
+              <Link href={demoLink} isExternal>
+                <Stack direction={"row"} align={"center"}>
+                  <Text fontWeight={600}>View Demo</Text> <FiLink />
+                </Stack>
+              </Link>
+            )}
 
-            <Link href={githubLink} isExternal>
-              <Stack direction={"row"} align={"center"}>
-                <Text fontWeight={600}>View Source</Text> <FiGithub />
-              </Stack>
-            </Link>
+            {githubLink && (
+              <Link href={githubLink} isExternal>
+                <Stack direction={"row"} align={"center"}>
+                  <Text fontWeight={600}>View Source</Text> <FiGithub />
+                </Stack>
+              </Link>
+            )}
           </Stack>
         </Box>
       </Center>
