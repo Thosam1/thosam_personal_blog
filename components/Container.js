@@ -6,15 +6,13 @@
 import React from "react";
 
 // for Chakra
-import {
-  useColorMode,
-  Flex,
-} from "@chakra-ui/react";
+import { useColorMode, Flex, Button, Box } from "@chakra-ui/react";
 
 // our components -> those we want rendered on every page
 import Navbar from "./Navbar";
-import Newsletter from "./Newsletter"
+import Newsletter from "./Newsletter";
 import Footer from "./Footer";
+import ScrollTopButton from "./ScrollTopButton";
 
 const Container = ({ children }) => {
   // for customizing based on light mode vs dark mode -> dynamically
@@ -33,7 +31,6 @@ const Container = ({ children }) => {
   return (
     <>
       <Navbar />
-
       {/* This will hold the code for the rest of the page -> in the "Flex" component */}
       <Flex
         as="main"
@@ -49,8 +46,14 @@ const Container = ({ children }) => {
         </Flex>
 
         <Newsletter />
-        <Footer />
+
+        {/* button scroll back to top */}
+        <ScrollTopButton />
+
       </Flex>
+
+      {/* Footer should take whole space */}
+      <Footer />
     </>
   );
 };
