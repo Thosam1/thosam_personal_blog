@@ -119,7 +119,7 @@ const Portfolio = () => {
         justifyContent="center"
         alignItems="flex-start"
         m="0 auto 4rem auto"
-        maxWidth="700px"
+        maxWidth="800px"
         px={2}
       >
         {/* Lower sections */}
@@ -127,7 +127,7 @@ const Portfolio = () => {
           flexDirection="column"
           justifyContent="flex-start"
           alignItems="flex-start"
-          maxWidth="700px"
+          maxWidth="800px"
         >
           {/* Quote time */}
           <Flex

@@ -117,7 +117,7 @@ export default function Index() {
         justifyContent="center"
         alignItems="flex-start"
         m="0 auto 4rem auto"
-        maxWidth="700px"
+        maxWidth="800px"
         px={2}
       >
         {/* Lower sections */}
@@ -125,7 +125,7 @@ export default function Index() {
           flexDirection="column"
           justifyContent="flex-start"
           alignItems="flex-start"
-          maxWidth="700px"
+          maxWidth="800px"
         >
           {/* About me */}
           <Box as="section" mt={10} mb={10}>

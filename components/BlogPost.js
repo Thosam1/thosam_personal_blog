@@ -15,12 +15,24 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
   return (
     <NextLink href={`blog/${slug}`} passHref>
       <Link w="100%" _hover={{ textDecoration: "none" }}>
-        <Box mb={10} display="block" width="100%">
+        <Box 
+        p={5}
+        display="block" 
+        width="100%"
+        border={"2px"}
+        borderColor={"#ffffff09"}
+        borderRadius={10}
+        _hover={{
+          borderColor: "#A0AEC0",
+          // border: "3px"
+        }}
+        >
           <Flex
             width="100%"
             align="flex-start"
             justifyContent="space-between"
             flexDirection={["column", "row"]}
+            // p="px"
           >
             <Flex
               flexDirection="column"

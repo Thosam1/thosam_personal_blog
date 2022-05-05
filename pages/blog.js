@@ -10,7 +10,9 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Text
+  Text,
+  VStack,
+  Spacer
 } from "@chakra-ui/react";
 
 // custom components
@@ -49,16 +51,16 @@ export default function Blog({ posts }) {
           justifyContent="center"
           alignItems="flex-start"
           m="0 auto 4rem auto"
-          maxWidth="700px"
+          maxWidth="800px"
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
-            maxWidth="700px"
+            maxWidth="800px"
             px={4}
           >
-            <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
+            <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
               My blog 📝
             </Heading> 
             {/* <Text>
@@ -82,9 +84,11 @@ export default function Blog({ posts }) {
 
             {!filteredBlogPosts.length && "No posts found :("}
             
+            <VStack spacing={6}>
             {filteredBlogPosts.map((frontMatter) => (
               <BlogPost key={frontMatter.title} {...frontMatter} />
             ))}
+            </VStack>
           </Flex>
         </Stack>
       </Container>

@@ -42,7 +42,7 @@ const Container = ({ children }) => {
         bg={bgColor[colorMode]} // bg color
         color={color[colorMode]} // text color
         px={[0, 4, 4]}
-        mt={[4, 8, 8]}
+        mt={[4, 8, 4]}
       >
         <Flex px={4} flexDir="column" minH="90vh">
           {children}
