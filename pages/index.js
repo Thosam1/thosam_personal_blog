@@ -42,6 +42,8 @@ export default function Index() {
         <title>Home - Thösam Norlha-Tsang</title>
       </Head>
 
+      <meta name="google-site-verification" content="-NttIeCsNFX7bi_Rj6onoCpyFICL51IJWnNl0mwkE2U" />
+
       <Flex
         w="100%"
         flexDir={["column", "column", "row"]}
