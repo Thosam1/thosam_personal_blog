@@ -1,3 +1,5 @@
+/* Bruh, idk if this thing works or not */
+
 import { GetServerSideProps } from "next";
 import { getServerSideSitemap } from "next-sitemap";
 
