@@ -34,7 +34,6 @@ const ScrollTopButton = () => {
 
   const scrollToTop = () => {
     document.documentElement.scrollTo({
-      // or window.scrollTo()
       top: 0,
       behavior: "smooth",
       /* you can also use 'auto' behaviour
@@ -62,7 +61,7 @@ const ScrollTopButton = () => {
               rotate: -45,
               transition: { duration: 0.2 },
             }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.5, rotate: -45 }}
           >
             <Button>
               <FaRocket />

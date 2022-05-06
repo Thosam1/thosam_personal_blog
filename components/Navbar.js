@@ -12,7 +12,7 @@ import {
 import NextLink from "next/link";
 
 // to get info about current route
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 // used for navbar
 import styled from "@emotion/styled";
@@ -24,7 +24,6 @@ import DarkModeSwitch from "./DarkModeSwitch";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-
   // to know which link we are currently in -> color the current navbar link
   const router = useRouter();
 
@@ -67,7 +66,6 @@ const Navbar = () => {
         as="nav"
         px={[2, 6, 6]}
         py={2}
-
         mt={8}
         mb={[0, 0, 8]}
         mx="auto"

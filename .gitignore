@@ -30,3 +30,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
+# SEO to regenerate them on deployed websites (eg: vercel, etc...)
+/public/robots.txt
+/public/sitemap.xml
+/public/sitemap-0.xml
