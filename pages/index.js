@@ -40,9 +40,8 @@ export default function Index() {
     <Container>
       <Head>
         <title>Home - Thösam Norlha-Tsang</title>
+        <meta name="google-site-verification" content="-NttIeCsNFX7bi_Rj6onoCpyFICL51IJWnNl0mwkE2U" />
       </Head>
-
-      <meta name="google-site-verification" content="-NttIeCsNFX7bi_Rj6onoCpyFICL51IJWnNl0mwkE2U" />
 
       <Flex
         w="100%"
