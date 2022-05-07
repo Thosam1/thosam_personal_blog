@@ -11,14 +11,12 @@ export default {
         images: [
             {
                 url: "https://thosam.vercel.app/images/website_thumbnail.png",
-                width: 1200,
-                height: 630,
             }
         ]  
     },
     twitter: {
         // handle: '@handle',
         // site: '@',
-        cardType: 'summary', // summary_large_image
+        cardType: 'summary_large_image', // summary_large_image
     },
 };

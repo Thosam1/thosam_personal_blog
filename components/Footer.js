@@ -72,7 +72,7 @@ const Footer = () => {
             />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/th%C3%B6sam-norlha-tsang-328932236/"
+            href="https://www.linkedin.com/in/th%C3%B6sam-n-328932236/"
             title="LinkedIn"
             isExternal
           >
