@@ -14,4 +14,9 @@ export default {
             }
         ]  
     },
+    twitter: {
+        // handle: '@handle',
+        // site: '@',
+        cardType: 'summary',
+    },
 };
