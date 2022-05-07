@@ -12,7 +12,7 @@ export default {
             {
                 url: "https://thosam.vercel.app/images/website_thumbnail.png",
             }
-        ]
+        ]  
     },
     // twitter: {
     //     handle: '@',
