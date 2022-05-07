@@ -28,19 +28,25 @@ import { getAllFilesFrontMatter } from "../lib/mdx";
 // SEO
 import { NextSeo } from "next-seo";
 
-export default function Blog({ posts }) {
-  // overriding SEO
-  const SEO = {
-    title: "Blog - Thösam Norlha-Tsang",
-    description:
-      "My blog page where you can learn from my experience and read interesting articles !",
+const url = 'https://thosam.vercel.app/blog'
+const title = "Blog - Thösam Norlha-Tsang";
+const description =
+  "My blog page where you can learn from my experience and read interesting articles !";
 
-    openGraph: {
-      title: "Blog - Thösam Norlha-Tsang",
-      description:
-        "My blog page where you can learn from my experience and read interesting articles !",
-    },
-  };
+// overriding SEO
+const SEO = {
+  title,
+  description,
+  canonical: url,
+
+  openGraph: {
+    title,
+    description,
+    url
+  },
+};
+
+export default function Blog({ posts }) {
 
   // state is needed for search functionality
   const [searchValue, setSearchValue] = useState("");

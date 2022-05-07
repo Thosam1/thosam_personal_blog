@@ -34,17 +34,24 @@ import { FiMail } from "react-icons/fi";
 // SEO
 import { NextSeo } from "next-seo";
 
-const About = () => {
-  // overriding SEO
-  const SEO = {
-    title: "About me - Thösam Norlha-Tsang",
-    description: "My about page where you can learn more about me !",
+const url = 'https://thosam.vercel.app/about'
+const title = "About me - Thösam Norlha-Tsang";
+const description = "My about page where you can learn more about me !";
 
-    openGraph: {
-      title: "About me page - Thösam Norlha-Tsang",
-      description: "My about page where you can learn more about me !",
-    },
-  };
+// overriding SEO
+const SEO = {
+  title,
+  description,
+  canonical: url,
+
+  openGraph: {
+    title,
+    description,
+    url
+  },
+};
+
+const About = () => {
 
   // for customizing based on light mode vs dark mode -> dynamically
   const { colorMode } = useColorMode();

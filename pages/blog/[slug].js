@@ -7,17 +7,28 @@ import MDXComponents from "../../components/MDXComponents";
 // SEO
 import { NextSeo } from "next-seo";
 
-// basic idea here : website/blog/slug -> it renders goes and gets the mdx file corresponding to the slug, then renders it
+// router to get current slug
+import { useRouter } from "next/router";
 
+// basic idea here : website/blog/slug -> it renders goes and gets the mdx file corresponding to the slug, then renders it
 export default function Blog({ mdxSource, frontMatter }) {
+  const router = useRouter();
+  const slug = router.asPath.replace("/blog", "");
+
+  const url = `https://thosam.vercel.app/blog${slug}`
+  const title = `Blog - ${frontMatter.title}`;
+  const description = `${frontMatter.title} - by Thösam Norlha-Tsang`;
+
   // overriding SEO
   const SEO = {
-    title: `Blog - ${frontMatter.title}`,
-    description: `${frontMatter.title} - by Thösam Norlha-Tsang`,
+    title,
+    description,
+    canonical: url,
 
     openGraph: {
-      title: `Blog - ${frontMatter.title}`,
-      description: `${frontMatter.title} - by Thösam Norlha-Tsang`,
+      title,
+      description,
+      url
     },
   };
 

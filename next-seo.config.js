@@ -5,6 +5,7 @@ const description = "A Personal Website for blog articles - portfolio - coding"
 export default {
     title,
     description,
+    canonical: 'https://thosam.vercel.app/',  
     openGraph: {
         type: 'website',
         locale: 'en_IE',

@@ -35,19 +35,24 @@ import ProjectCard from "../components/ProjectCard";
 // SEO
 import { NextSeo } from "next-seo";
 
-const Portfolio = () => {
-  // overriding SEO
-  const SEO = {
-    title: "Portfolio - Thösam Norlha-Tsang",
-    description:
-      "Have a look at my projects - see my education and experience !",
+const url = 'https://thosam.vercel.app/portfolio'
+const title = "Portfolio - Thösam Norlha-Tsang";
+const description = "Have a look at my projects - see my education and experience !";
 
-    openGraph: {
-      title: "Portfolio - Thösam Norlha-Tsang",
-      description:
-        "Have a look at my projects - see my education and experience !",
-    },
-  };
+// overriding SEO
+const SEO = {
+  title,
+  description,
+  canonical: url,
+
+  openGraph: {
+    title,
+    description,
+    url
+  },
+};
+
+const Portfolio = () => {
 
   const { colorMode } = useColorMode();
 

@@ -29,18 +29,25 @@ import { motion } from "framer-motion";
 // SEO
 import { NextSeo } from "next-seo";
 
+const url = 'https://thosam.vercel.app/'
+const title = "Thösam Norlha-Tsang";
+const description =
+  "Software Engineer, AI enthusiast and Video Creator. This is my personal website where you can read my articles and have a look at my portfolio - Have fun !";
+
+// overriding SEO
+const SEO = {
+  title,
+  description,
+  canonical: url,
+
+  openGraph: {
+    title,
+    description,
+    url
+  },
+};
+
 export default function Index() {
-  // overriding SEO
-  const SEO = {
-    title: "Thösam Norlha-Tsang",
-    description: "Software Engineer, AI enthusiast and Video Creator. This is my personal website where you can read my articles and have a look at my portfolio - Have fun !",
-
-    openGraph: {
-      title: "Thösam Norlha-Tsang",
-      description: "Software Engineer, AI enthusiast and Video Creator. This is my personal website where you can read my articles and have a look at my portfolio - Have fun !",
-    },
-  };
-
   const { colorMode } = useColorMode();
 
   // so subtext is a bit lighter
