@@ -32,12 +32,12 @@ import { NextSeo } from "next-seo";
 export default function Index() {
   // overriding SEO
   const SEO = {
-    title: "Home - Thösam Norlha-Tsang",
-    description: "Software Engineer, AI enthusiast and Video Creator - This is my personal website : there is a portfolio | blog sections - Have fun !",
+    title: "Thösam Norlha-Tsang",
+    description: "Software Engineer, AI enthusiast and Video Creator. This is my personal website where you can read my articles and have a look at my portfolio - Have fun !",
 
     openGraph: {
-      title: "Home - Thösam Norlha-Tsang",
-      description: "Software Engineer, AI enthusiast and Video Creator - This is my personal website : there is a portfolio | blog sections - Have fun !",
+      title: "Thösam Norlha-Tsang",
+      description: "Software Engineer, AI enthusiast and Video Creator. This is my personal website where you can read my articles and have a look at my portfolio - Have fun !",
     },
   };
 

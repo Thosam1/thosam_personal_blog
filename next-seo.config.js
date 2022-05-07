@@ -8,6 +8,7 @@ export default {
         locale: 'en_IE',
         url: 'https://thosam.vercel.app/',
         site_name: 'Thösam Norlha-Tsang',
+        image: "/images/website_thumbnail.png"
     },
     // twitter: {
     //     handle: '@',
