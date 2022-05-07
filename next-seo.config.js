@@ -10,7 +10,10 @@ export default {
         site_name: 'Thösam Norlha-Tsang',
         images: [
             {
-                url: "/images/website_thumbnail.png"
+                url: "/images/website_thumbnail.png",
+                width: 1280,
+                height: 720,
+                alt: "thumbnail Thösam"
             }
         ]
     },
