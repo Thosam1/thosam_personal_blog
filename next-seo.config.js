@@ -14,9 +14,14 @@ export default {
             }
         ]  
     },
-    // twitter: {
-    //     handle: '@',
-    //     site: '@',
-    //     cardType: 'summary_large_image',
-    // },
+    twitter: {
+        // handle: '@',
+        // site: '@',
+        cardType: 'summary_large_image',
+        images: [
+            {
+                url: "https://thosam.vercel.app/images/website_thumbnail.png",
+            }
+        ]  
+    },
 };
