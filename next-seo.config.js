@@ -10,7 +10,7 @@ export default {
         site_name: 'Thösam Norlha-Tsang',
         images: [
             {
-                url: "/public/images/website_thumbnail.png",
+                url: "https://thosam.vercel.app/images/website_thumbnail.png",
             }
         ]
     },
