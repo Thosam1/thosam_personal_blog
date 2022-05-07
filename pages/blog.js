@@ -12,7 +12,7 @@ import {
   InputRightElement,
   Text,
   VStack,
-  Spacer
+  Spacer,
 } from "@chakra-ui/react";
 
 // custom components
@@ -25,7 +25,23 @@ import { SearchIcon } from "@chakra-ui/icons";
 // custom function to fetch data
 import { getAllFilesFrontMatter } from "../lib/mdx";
 
+// SEO
+import { NextSeo } from "next-seo";
+
 export default function Blog({ posts }) {
+  // overriding SEO
+  const SEO = {
+    title: "Blog - Thösam Norlha-Tsang",
+    description:
+      "My blog page where you can learn from my experience and read interesting articles !",
+
+    openGraph: {
+      title: "Blog - Thösam Norlha-Tsang",
+      description:
+        "My blog page where you can learn from my experience and read interesting articles !",
+    },
+  };
+
   // state is needed for search functionality
   const [searchValue, setSearchValue] = useState("");
 
@@ -41,8 +57,9 @@ export default function Blog({ posts }) {
 
   return (
     <>
+      <NextSeo {...SEO} />
       <Head>
-        <title>Blog - Thösam Norkha-Tsang</title>
+        <title>Blog - Thösam Norlha-Tsang</title>
       </Head>
       <Container>
         <Stack
@@ -62,7 +79,7 @@ export default function Blog({ posts }) {
           >
             <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
               My blog 📝
-            </Heading> 
+            </Heading>
             {/* <Text>
             ({posts.length} posts)
             </Text> */}
@@ -71,7 +88,7 @@ export default function Blog({ posts }) {
                 aria-label="Search by title"
                 placeholder="Search by title"
                 onChange={(e) => setSearchValue(e.target.value)}
-                variant='unstyled'
+                variant="unstyled"
                 // border="1px"
                 p="15px"
                 bg={"blackAlpha.500"}
@@ -83,11 +100,11 @@ export default function Blog({ posts }) {
             </InputGroup>
 
             {!filteredBlogPosts.length && "No posts found :("}
-            
+
             <VStack spacing={6}>
-            {filteredBlogPosts.map((frontMatter) => (
-              <BlogPost key={frontMatter.title} {...frontMatter} />
-            ))}
+              {filteredBlogPosts.map((frontMatter) => (
+                <BlogPost key={frontMatter.title} {...frontMatter} />
+              ))}
             </VStack>
           </Flex>
         </Stack>

@@ -4,15 +4,31 @@ import { getFiles, getFileBySlug } from "../../lib/mdx";
 import BlogLayout from "../../layouts/blog";
 import MDXComponents from "../../components/MDXComponents";
 
+// SEO
+import { NextSeo } from "next-seo";
 
 // basic idea here : website/blog/slug -> it renders goes and gets the mdx file corresponding to the slug, then renders it
 
 export default function Blog({ mdxSource, frontMatter }) {
+  // overriding SEO
+  const SEO = {
+    title: `Blog - ${frontMatter.title}`,
+    description: `${frontMatter.title} - by Thösam Norlha-Tsang`,
+
+    openGraph: {
+      title: `Blog - ${frontMatter.title}`,
+      description: `${frontMatter.title} - by Thösam Norlha-Tsang`,
+    },
+  };
+
   // getting the content of that mdx file and rendering
   return (
-    <BlogLayout frontMatter={frontMatter}>
-      <MDXRemote {...mdxSource} components={MDXComponents} />
-    </BlogLayout>
+    <>
+      <NextSeo {...SEO} />
+      <BlogLayout frontMatter={frontMatter}>
+        <MDXRemote {...mdxSource} components={MDXComponents} />
+      </BlogLayout>
+    </>
   );
 }
 

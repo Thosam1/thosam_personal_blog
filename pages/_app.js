@@ -15,6 +15,10 @@ import { Global, css } from "@emotion/react";
 // importing prism light and dark theme for code snippets
 import { prismLightTheme, prismDarkTheme } from "../styles/prism";
 
+// SEO
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config";
+
 const GlobalStyle = ({ children }) => {
   // grabbing reference
   const { colorMode } = useColorMode();
@@ -23,7 +27,7 @@ const GlobalStyle = ({ children }) => {
     <>
       <Global
         styles={css`
-          ${colorMode === 'light' ? prismLightTheme : prismDarkTheme };
+          ${colorMode === "light" ? prismLightTheme : prismDarkTheme};
           ::selection {
             background-color: #90cdf4;
             color: #fefefe;
@@ -52,18 +56,21 @@ const GlobalStyle = ({ children }) => {
 // root app
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS theme={customTheme}>
-      <ColorModeProvider
-        options={{
-          initialColorMode: "light",
-          useSystemColorMode: true,
-        }}
-      >
-        <GlobalStyle>
-          <Component {...pageProps} />
-        </GlobalStyle>
-      </ColorModeProvider>
-    </ChakraProvider>
+    <>
+      <DefaultSeo {...SEO} />
+      <ChakraProvider resetCSS theme={customTheme}>
+        <ColorModeProvider
+          options={{
+            initialColorMode: "light",
+            useSystemColorMode: true,
+          }}
+        >
+          <GlobalStyle>
+            <Component {...pageProps} />
+          </GlobalStyle>
+        </ColorModeProvider>
+      </ChakraProvider>
+    </>
   );
 }
 

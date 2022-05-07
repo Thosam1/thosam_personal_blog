@@ -26,9 +26,7 @@ import Container from "../components/Container"; // wrapper of pages
 import { motion } from "framer-motion";
 
 const Youtube = () => {
-    return (
-        <h1>Youtube</h1>
-    );
-}
+  return <h1>Youtube</h1>;
+};
 
 export default Youtube;

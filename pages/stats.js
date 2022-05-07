@@ -26,9 +26,7 @@ import Container from "../components/Container"; // wrapper of pages
 import { motion } from "framer-motion";
 
 const Stats = () => {
-    return (
-        <h1>Stats</h1>
-    );
-}
+  return <h1>Stats</h1>;
+};
 
 export default Stats;
