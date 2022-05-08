@@ -28,7 +28,7 @@ export default function ProjectCard({
         <Box
           maxW={"700px"} // so can take up to whole width
           w={"full"}
-          bg={useColorModeValue("white", "gray.900")}
+          bg={useColorModeValue("blue.100", "gray.900")}
           rounded={"25px"}
           p={6}
           overflow={"hidden"}
@@ -63,7 +63,7 @@ export default function ProjectCard({
             </Heading>
             <Text color={"gray.500"}>{description}</Text>
           </Stack>
-          <Stack mt={6} direction={"row"} spacing={6} align={"center"}>
+          <Stack mt={6} direction={"row"} spacing={6} align={"center"} >
             {demoLink && (
               <Link href={demoLink} isExternal>
                 <Stack direction={"row"} align={"center"}>

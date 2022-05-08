@@ -24,15 +24,18 @@ import DarkModeSwitch from "./DarkModeSwitch";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  // to know which link we are currently in -> color the current navbar link
-  const router = useRouter();
-
   // for customizing based on light mode vs dark mode -> dynamically
   const { colorMode } = useColorMode();
 
-  const bgColor = {
-    light: "#F7FAFC",
-    dark: "#171717",
+  // no need since defined in _app.js
+  // const bgColor = {
+  //   light: "#F7FAFC",
+  //   dark: "#171717",
+  // };
+
+  const color = {
+    light: "RGBA(0, 0, 0, 0.90)",
+    dark: "white",
   };
 
   const navHoverBg = {
@@ -42,10 +45,10 @@ const Navbar = () => {
 
   // building our navbar
   const StickyNav = styled(Flex)`
-    position: sticky;
+    /* position: sticky; */
     z-index: 10;
     top: 0;
-    backdrop-filter: saturate(180%) blur(20px);
+    /* backdrop-filter: saturate(180%) blur(20px); */
     transition: height 0.5s, line-height 0.5s;
   `;
 
@@ -62,13 +65,14 @@ const Navbar = () => {
         maxWidth="800px"
         minWidth="356px"
         width="100%"
-        bg={bgColor[colorMode]}
+        // bg={bgColor[colorMode]}
         as="nav"
         px={[2, 6, 6]}
         py={2}
         mt={8}
         mb={[0, 0, 8]}
         mx="auto"
+        color={color[colorMode]}
       >
         <Box>
           <NextLink href="/" passHref>

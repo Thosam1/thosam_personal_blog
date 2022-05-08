@@ -18,13 +18,14 @@ const Container = ({ children }) => {
   // for customizing based on light mode vs dark mode -> dynamically
   const { colorMode } = useColorMode();
 
-  const bgColor = {
-    light: "#F7FAFC",
-    dark: "#171717",
-  };
+  // no need to override here since already done in _app.js
+  // const bgColor = {
+  //   light: "#F7FAFC",
+  //   dark: "hsl(200, 7%, 8%)",
+  // };
 
   const color = {
-    light: "black",
+    light: "RGBA(0, 0, 0, 0.90)", // "gray.700",
     dark: "white",
   };
 
@@ -36,7 +37,7 @@ const Container = ({ children }) => {
         as="main"
         justifyContent="center"
         flexDirection="column"
-        bg={bgColor[colorMode]} // bg color
+        // bg={bgColor[colorMode]} // bg color
         color={color[colorMode]} // text color
         px={[0, 4, 4]}
         mt={[4, 8, 4]}
@@ -49,7 +50,6 @@ const Container = ({ children }) => {
 
         {/* button scroll back to top */}
         <ScrollTopButton />
-
       </Flex>
 
       {/* Footer should take whole space */}

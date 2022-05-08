@@ -2,7 +2,7 @@
 // after fetching the data, we will map and render blog posts as rectangles (in columns below search bar)
 import React from "react";
 import NextLink from "next/link";
-import { useColorMode, Heading, Text, Flex, Box, Link } from "@chakra-ui/react";
+import { useColorMode, Heading, Text, Flex, Box, Link, border, color } from "@chakra-ui/react";
 import { parseISO, format } from "date-fns"; // to parse through the dates
 
 const BlogPost = ({ title, publishedAt, summary, slug }) => {
@@ -11,6 +11,10 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
     light: "gray.700",
     dark: "gray.400",
   };
+  const borderColor = {
+    light: "gray.300",
+    dark: "#ffffff09"
+  }
 
   return (
     <NextLink href={`blog/${slug}`} passHref>
@@ -20,7 +24,7 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
         display="block" 
         width="100%"
         border={"2px"}
-        borderColor={"#ffffff09"}
+        borderColor={borderColor[colorMode]}
         borderRadius={10}
         _hover={{
           borderColor: "#A0AEC0",

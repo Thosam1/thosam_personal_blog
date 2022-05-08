@@ -4,6 +4,7 @@ import Head from "next/head";
 
 // chakra components
 import {
+  useColorMode,
   Heading,
   Flex,
   Stack,
@@ -13,6 +14,7 @@ import {
   Text,
   VStack,
   Spacer,
+  HStack,
 } from "@chakra-ui/react";
 
 // custom components
@@ -28,7 +30,7 @@ import { getAllFilesFrontMatter } from "../lib/mdx";
 // SEO
 import { NextSeo } from "next-seo";
 
-const url = 'https://thosam.vercel.app/blog'
+const url = "https://thosam.vercel.app/blog";
 const title = "Blog - Thösam Norlha-Tsang";
 const description =
   "My blog page where you can learn from my experience and read interesting articles !";
@@ -42,11 +44,16 @@ const SEO = {
   openGraph: {
     title,
     description,
-    url
+    url,
   },
 };
 
 export default function Blog({ posts }) {
+  const { colorMode } = useColorMode();
+  const input_Bg = {
+    light: "black",
+    dark: "blackAlpha.500",
+  };
 
   // state is needed for search functionality
   const [searchValue, setSearchValue] = useState("");
@@ -86,23 +93,22 @@ export default function Blog({ posts }) {
             <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
               My blog 📝
             </Heading>
-            {/* <Text>
-            ({posts.length} posts)
-            </Text> */}
+
+            <Heading size="sm" as="h3" mb={3} fontWeight="medium">
+              Here you can read any of my {posts.length} articles, you can search keywords below. Enjoy ! 🙂 
+            </Heading>
+
             <InputGroup mb={4} mr={4} w="100%" alignContent={"center"}>
               <Input
                 aria-label="Search by title"
                 placeholder="Search by title"
                 onChange={(e) => setSearchValue(e.target.value)}
                 variant="unstyled"
-                // border="1px"
                 p="15px"
-                bg={"blackAlpha.500"}
+                bg={input_Bg[colorMode]} 
                 borderRadius="10px"
+                color={"white"}
               />
-              <InputRightElement>
-                <SearchIcon color="gray.300" />
-              </InputRightElement>
             </InputGroup>
 
             {!filteredBlogPosts.length && "No posts found :("}

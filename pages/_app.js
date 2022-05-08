@@ -15,6 +15,9 @@ import { Global, css } from "@emotion/react";
 // importing prism light and dark theme for code snippets
 import { prismLightTheme, prismDarkTheme } from "../styles/prism";
 
+// our custom bg style
+import { bgColor } from "../styles/theme_color_schemes";
+
 // SEO
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
@@ -44,7 +47,7 @@ const GlobalStyle = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === "light" ? "#F7FAFC" : "#171717"};
+            background: ${colorMode === "light" ? bgColor.light : bgColor.dark};
           }
         `}
       />
@@ -61,7 +64,7 @@ function MyApp({ Component, pageProps }) {
       <ChakraProvider resetCSS theme={customTheme}>
         <ColorModeProvider
           options={{
-            initialColorMode: "light",
+            initialColorMode: "dark",
             useSystemColorMode: true,
           }}
         >

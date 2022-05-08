@@ -53,7 +53,7 @@ export default function Index() {
   // so subtext is a bit lighter
   const colorSecondary = {
     light: "gray.700",
-    dark: "gray.400",
+    dark: "gray.500",
   };
 
   return (

@@ -23,7 +23,7 @@ const SkillCard = ({ name, image, link, description }) => {
         <Link isExternal> */}
           <HStack
             p={4}
-            bg={useColorModeValue("white", "gray.800")}
+            bg={useColorModeValue("blue.100", "gray.800")}
             rounded="xl"
             borderWidth="1px"
             borderColor={useColorModeValue("gray.100", "gray.700")}
@@ -42,7 +42,7 @@ const SkillCard = ({ name, image, link, description }) => {
               boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.015)"
             >
               <Box
-                bg="#39465B"
+                bg={useColorModeValue("orange.100", "#39465B")} 
                 position="absolute"
                 top={0}
                 bottom={0}
