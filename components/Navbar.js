@@ -74,7 +74,7 @@ const Navbar = () => {
         mx="auto"
         color={color[colorMode]}
       >
-        <Box>
+        <Box alignItems="center">
           <NextLink href="/" passHref>
             <Button
               as="a"
