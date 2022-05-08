@@ -6,6 +6,7 @@ import {
   Button, // to separate in a different file
   Flex,
   Box,
+  HStack,
 } from "@chakra-ui/react";
 
 // for links in Navbar
@@ -74,7 +75,7 @@ const Navbar = () => {
         mx="auto"
         color={color[colorMode]}
       >
-        <Box alignItems="center">
+        <Box>
           <NextLink href="/" passHref>
             <Button
               as="a"
