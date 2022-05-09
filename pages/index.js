@@ -199,6 +199,7 @@ export default function Index() {
 
               <ProjectCards featured={true} />
 
+              <Link href="/portfolio">
               <Button
                 data-splitbee-event="Button Click"
                 data-splitbee-event-type="Resume"
@@ -207,6 +208,7 @@ export default function Index() {
               >
                 Wanna see more ? 😄
               </Button>
+              </Link>
             </Box>
           </Flex>
         </Stack>

@@ -22,18 +22,18 @@ export default function skillsList() {
           image: '/images/skills/java.png'
         },
         {
+          name: 'Scala',
+          description: 'Functional Programming, Parallelism, Concurrency',
+          link: 'https://www.python.org/',
+          type: 'development',
+          image: '/images/skills/scala.png'
+        },
+        {
           name: 'Python',
           description: 'Data Science, Deep Learning, Research, Kaggle',
           link: 'https://www.python.org/',
           type: 'development',
           image: '/images/skills/python.png'
-        },
-        {
-          name: 'Scala',
-          description: 'Parallelism, Concurrency',
-          link: 'https://www.python.org/',
-          type: 'development',
-          image: '/images/skills/scala.png'
         },
         {
           name: 'Git',

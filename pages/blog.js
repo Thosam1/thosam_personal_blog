@@ -52,7 +52,7 @@ export default function Blog({ posts }) {
   const { colorMode } = useColorMode();
   const input_Bg = {
     light: "black",
-    dark: "blackAlpha.500",
+    dark: "#202020", // "blackAlpha.500", -> with contrast cannot see
   };
 
   // state is needed for search functionality
