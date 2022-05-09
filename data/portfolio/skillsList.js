@@ -42,5 +42,26 @@ export default function skillsList() {
           type: 'development',
           image: '/images/skills/git.png'
         },
+        {
+          name: 'C',
+          description: 'Structured Programming Language',
+          link: 'https://www.cprogramming.com/',
+          type: 'development',
+          image: '/images/skills/c.png'
+        },
+        {
+          name: 'Assembly',
+          description: 'NIOS II, Computer Architecture',
+          link: 'https://www.python.org/',
+          type: 'hardware',
+          image: '/images/skills/assembly.png'
+        },
+        {
+          name: 'VHDL',
+          description: 'Computer Architecture, Hardware Description Language',
+          link: 'https://vhdlguide.readthedocs.io/en/latest/',
+          type: 'hardware',
+          image: '/images/skills/vhdl.png'
+        },
       ];
 }
