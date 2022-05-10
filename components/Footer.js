@@ -5,6 +5,7 @@ import {
   useColorMode,
   useColorModeValue,
   Box,
+  Divider,
 } from "@chakra-ui/react";
 import {
   FiGithub,
@@ -30,8 +31,13 @@ const Footer = () => {
 
   // rendering
   return (
-    <Box bgColor={useColorModeValue("rgb(248, 250, 252)", "gray.900")} mt={4}>
-      <Flex align="center" my={4} direction="column">
+    <Box
+      //  bgColor={useColorModeValue("rgb(248, 250, 252)", "gray.900")}
+      mt={10}
+      align="center"
+    >
+      <Divider maxWidth={400} />
+      <Flex align="center" my={4} direction="column" pt={4}>
         <div>
           <Link
             href="https://www.youtube.com/channel/UCadaAVpUtRtVSfPPy7z5lXA"
