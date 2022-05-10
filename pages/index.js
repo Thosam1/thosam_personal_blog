@@ -12,10 +12,6 @@ import {
   Button, // base
   Box, // extensions
   Link,
-  useColorModeValue,
-  SimpleGrid,
-  Icon,
-  Divider,
   AspectRatio,
 } from "@chakra-ui/react";
 

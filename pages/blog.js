@@ -10,19 +10,12 @@ import {
   Stack,
   Input,
   InputGroup,
-  InputRightElement,
-  Text,
   VStack,
-  Spacer,
-  HStack,
 } from "@chakra-ui/react";
 
 // custom components
 import Container from "../components/Container";
 import BlogPost from "../components/BlogPost";
-
-// chakra icon
-import { SearchIcon } from "@chakra-ui/icons";
 
 // custom function to fetch data
 import { getAllFilesFrontMatter } from "../lib/mdx";

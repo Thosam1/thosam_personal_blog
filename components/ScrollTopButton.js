@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // for Chakra
-import { useColorMode, Flex, Button, Box } from "@chakra-ui/react";
+import { useColorMode, Button, Box } from "@chakra-ui/react";
 
 // icon
 import { FaRocket } from "react-icons/fa";
@@ -23,14 +23,6 @@ const ScrollTopButton = () => {
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
 
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 100) {
-      setVisible(true);
-    } else if (scrolled <= 300) {
-      setVisible(false);
-    }
-  };
 
   const scrollToTop = () => {
     document.documentElement.scrollTo({
@@ -63,7 +55,7 @@ const ScrollTopButton = () => {
             }}
               whileTap={{ scale: 1.5, rotate: -45 }}
           >
-            <Button>
+            <Button colorScheme='blue' >
               <FaRocket />
             </Button>
           </motion.button>

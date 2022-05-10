@@ -3,12 +3,6 @@ import { MotionBox } from "./MotionBox";
 import CourseCard from "./CourseCard";
 
 // course arrays
-// import {
-//   BA1List,
-//   BA2List,
-//   BA3List,
-//   BA4List,
-// } from "../data/portfolio/education";
 import BA1List from "../data/portfolio/education/BA1List";
 import BA2List from "../data/portfolio/education/BA2List";
 import BA3List from "../data/portfolio/education/BA3List";
@@ -47,7 +41,7 @@ const CourseCards = ({semester}) => {
   return (
     <MotionBox variants={container} initial="hidden" animate="visible">
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
-        {correctList(semester).map((object, index) => (
+        {array.map((object, index) => (
           <CourseCard
             key={index}
             name={object.name}

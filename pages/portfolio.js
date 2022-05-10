@@ -28,14 +28,15 @@ import { motion } from "framer-motion";
 // icon
 import { GrBlockQuote } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
-import ProjectCard from "../components/ProjectCard";
+import { MdOutlineSchool } from "react-icons/md";
 
 // SEO
 import { NextSeo } from "next-seo";
 
-const url = 'https://thosam.vercel.app/portfolio'
+const url = "https://thosam.vercel.app/portfolio";
 const title = "Portfolio - Thösam Norlha-Tsang";
-const description = "Have a look at my projects - see my education and experience !";
+const description =
+  "Have a look at my projects - see my education and experience !";
 
 // overriding SEO
 const SEO = {
@@ -46,12 +47,11 @@ const SEO = {
   openGraph: {
     title,
     description,
-    url
+    url,
   },
 };
 
 const Portfolio = () => {
-
   const { colorMode } = useColorMode();
 
   // so subtext is a bit lighter
@@ -240,18 +240,21 @@ const Portfolio = () => {
             </Box>
 
             {/* Education */}
-            <Box as="section" mt={10} mb={10}>
+            <Box as="section" mt={10} mb={10} align="center">
               <Heading
                 letterSpacing="tight"
-                mt={8}
-                size="lg"
+                size="2xl"
                 fontWeight={700}
                 as="h2"
-                mb={7}
+                alignSelf={"center"}
               >
-                Education 
+                Education
               </Heading>
+              
+                  <MdOutlineSchool size="40px" />
 
+
+              {/* <MdOutlineSchool size="40px" /> */}
               <Heading
                 letterSpacing="tight"
                 mt={8}
@@ -260,7 +263,7 @@ const Portfolio = () => {
                 as="h2"
                 mb={7}
               >
-                EPFL - Bachelor of Computer Science :
+                EPFL - Bachelor of Computer Science
               </Heading>
               <Heading
                 letterSpacing="tight"
@@ -273,7 +276,7 @@ const Portfolio = () => {
                 EPFL - Year 1 - Semester 1
               </Heading>
               <CourseCards semester={"1"} />
-              
+
               <Heading
                 letterSpacing="tight"
                 mt={8}
@@ -285,7 +288,7 @@ const Portfolio = () => {
                 EPFL - Year 1 - Semester 2
               </Heading>
               <CourseCards semester={"2"} />
-              
+
               <Heading
                 letterSpacing="tight"
                 mt={8}
@@ -297,7 +300,7 @@ const Portfolio = () => {
                 EPFL - Year 2 - Semester 1
               </Heading>
               <CourseCards semester={"3"} />
-              
+
               <Heading
                 letterSpacing="tight"
                 mt={8}
@@ -309,7 +312,6 @@ const Portfolio = () => {
                 EPFL - Year 2 - Semester 2
               </Heading>
               <CourseCards semester={"4"} />
-              
             </Box>
 
             {/* Contact Me */}

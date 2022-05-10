@@ -31,7 +31,7 @@ const CourseCard = ({ name, code, credits, type, link }) => {
     <MotionBox whileHover={{ y: -5 }}>
       <VStack
         p={4}
-        bg={useColorModeValue("blue.100", "gray.800")}
+        bg={useColorModeValue("gray.200", "gray.800")}
         rounded="xl"
         w="100%"
         textAlign="left"
@@ -44,7 +44,7 @@ const CourseCard = ({ name, code, credits, type, link }) => {
         borderLeft="10px solid"
         borderLeftColor={chooseColor(type)}
       >
-        <Text fontWeight="bold" fontSize="md" noOfLines={2} color="blue.500">
+        <Text fontWeight="bold" fontSize="md" noOfLines={2} color={useColorModeValue("gray.600", "gray.400")}>
           {name}
         </Text>
         <HStack w="full" justifyContent="space-between">
@@ -52,14 +52,14 @@ const CourseCard = ({ name, code, credits, type, link }) => {
             <Text
               fontSize="sm"
               fontWeight="medium"
-              color={useColorModeValue("gray.500", "gray.200")}
+              color={useColorModeValue("gray.500", "gray.300")}
             >
               {code} · {credits} credits
             </Text>
           </Box>
           <Box>
-            <Link href={link} title={code} color="blue.500" isExternal>
-              <Text fontSize="sm" fontWeight="medium" color={"blue.200"}>
+            <Link href={link} title={code} color="blue.300" isExternal>
+              <Text fontSize="sm" fontWeight="medium" color={useColorModeValue("blue.400", "blue.300")}>
                 Course Link
               </Text>
             </Link>

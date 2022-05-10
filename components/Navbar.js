@@ -6,14 +6,10 @@ import {
   Button, // to separate in a different file
   Flex,
   Box,
-  HStack,
 } from "@chakra-ui/react";
 
 // for links in Navbar
 import NextLink from "next/link";
-
-// to get info about current route
-import { useRouter } from "next/router";
 
 // used for navbar
 import styled from "@emotion/styled";

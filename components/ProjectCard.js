@@ -28,10 +28,11 @@ export default function ProjectCard({
         <Box
           maxW={"700px"} // so can take up to whole width
           w={"full"}
-          bg={useColorModeValue("blue.100", "gray.900")}
+          bg={useColorModeValue("gray.200", "gray.900")}
           rounded={"25px"}
           p={6}
           overflow={"hidden"}
+          boxShadow={useColorModeValue("2xl", "sm")} 
         >
           {/* rendering all images in a carousel */}
           <Box h={"320px"} mt={-6} mx={-6} mb={6} pos={"relative"}>

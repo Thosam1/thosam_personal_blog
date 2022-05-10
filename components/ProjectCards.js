@@ -34,7 +34,7 @@ const ProjectCards = ({ featured }) => {
             }
             return (
               <ProjectCard
-                key={index}
+                key={object.title}
                 title={object.title}
                 description={object.description}
                 githubLink={object.githubLink}
