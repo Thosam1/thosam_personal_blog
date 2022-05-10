@@ -12,10 +12,7 @@ import {
   Box, // extensions
   Link,
   useColorModeValue,
-  SimpleGrid,
   Icon,
-  Divider,
-  AspectRatio,
   Image,
 } from "@chakra-ui/react";
 
@@ -23,6 +20,7 @@ import {
 import Container from "../components/Container"; // wrapper of pages
 import SkillCards from "../components/SkillCards";
 import ProjectCards from "../components/ProjectCards";
+import CourseCards from "../components/CourseCards";
 
 // animations
 import { motion } from "framer-motion";
@@ -251,8 +249,67 @@ const Portfolio = () => {
                 as="h2"
                 mb={7}
               >
-                Education
+                Education 
               </Heading>
+
+              <Heading
+                letterSpacing="tight"
+                mt={8}
+                size="lg"
+                fontWeight={700}
+                as="h2"
+                mb={7}
+              >
+                EPFL - Bachelor of Computer Science :
+              </Heading>
+              <Heading
+                letterSpacing="tight"
+                mt={8}
+                size="md"
+                fontWeight={700}
+                as="h2"
+                mb={7}
+              >
+                EPFL - Year 1 - Semester 1
+              </Heading>
+              <CourseCards semester={"1"} />
+              
+              <Heading
+                letterSpacing="tight"
+                mt={8}
+                size="md"
+                fontWeight={700}
+                as="h2"
+                mb={7}
+              >
+                EPFL - Year 1 - Semester 2
+              </Heading>
+              <CourseCards semester={"2"} />
+              
+              <Heading
+                letterSpacing="tight"
+                mt={8}
+                size="md"
+                fontWeight={700}
+                as="h2"
+                mb={7}
+              >
+                EPFL - Year 2 - Semester 1
+              </Heading>
+              <CourseCards semester={"3"} />
+              
+              <Heading
+                letterSpacing="tight"
+                mt={8}
+                size="md"
+                fontWeight={700}
+                as="h2"
+                mb={7}
+              >
+                EPFL - Year 2 - Semester 2
+              </Heading>
+              <CourseCards semester={"4"} />
+              
             </Box>
 
             {/* Contact Me */}

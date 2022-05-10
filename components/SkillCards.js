@@ -1,4 +1,4 @@
-import { SimpleGrid, Container } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import { MotionBox } from "./MotionBox";
 import skillsList from "../data/portfolio/skillsList";
 import SkillCard from "./SkillCard";
@@ -25,7 +25,6 @@ const SkillCards = () => {
               name={object.name}
               description={object.description}
               image={object.image}
-            //   link={tool.link}
             />
           ))}
         </SimpleGrid>
