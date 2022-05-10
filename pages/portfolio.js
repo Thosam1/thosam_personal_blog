@@ -1,6 +1,8 @@
 /* Portfolio - page */
 import Head from "next/head";
 
+import { useEffect } from "react";
+
 // more chakra ui elements
 import {
   useColorMode,
@@ -52,6 +54,19 @@ const SEO = {
 };
 
 const Portfolio = () => {
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+    });
+  });
+
+
   const { colorMode } = useColorMode();
 
   // so subtext is a bit lighter
@@ -90,10 +105,8 @@ const Portfolio = () => {
             </Text>
 
             <Stack direction={"row"} align={"center"} spacing={4}>
-              <Link href="/portfolio">
+              <Link href="#works">
                 <Button
-                  data-splitbee-event="Button Click"
-                  data-splitbee-event-type="Resume"
                   mt={5}
                 >
                   My works
@@ -224,7 +237,7 @@ const Portfolio = () => {
             </Box>
 
             {/* Featured Projects */}
-            <Box as="section" mt={10} mb={10}>
+            <Box id="works" as="section" mt={10} mb={10}>
               <Heading
                 letterSpacing="tight"
                 mt={8}
