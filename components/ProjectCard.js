@@ -28,7 +28,7 @@ export default function ProjectCard({
         <Box
           maxW={"700px"} // so can take up to whole width
           w={"full"}
-          bg={useColorModeValue("gray.200", "gray.900")}
+          bg={useColorModeValue("gray.200", "#1B1B1B")}
           rounded={"25px"}
           p={6}
           overflow={"hidden"}

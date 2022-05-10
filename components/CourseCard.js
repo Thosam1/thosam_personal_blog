@@ -31,7 +31,7 @@ const CourseCard = ({ name, code, credits, type, link }) => {
     <MotionBox whileHover={{ y: -5 }}>
       <VStack
         p={4}
-        bg={useColorModeValue("gray.200", "gray.800")}
+        bg={useColorModeValue("gray.200", "#1B1B1B")}
         rounded="xl"
         w="100%"
         textAlign="left"

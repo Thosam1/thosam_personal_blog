@@ -13,7 +13,7 @@ const SkillCard = ({ name, image, link, description }) => {
     <MotionBox whileHover={{ y: -5 }}>
       <HStack
         p={4}
-        bg={useColorModeValue("gray.100", "gray.800")}
+        bg={useColorModeValue("gray.100", "#1B1B1B")}
         rounded="xl"
         w="full"
         textAlign="left"
