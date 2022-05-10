@@ -251,7 +251,7 @@ const Portfolio = () => {
                 Education
               </Heading>
               
-                  <MdOutlineSchool size="40px" />
+                  {/* <MdOutlineSchool size="40px" /> */}
 
 
               {/* <MdOutlineSchool size="40px" /> */}
