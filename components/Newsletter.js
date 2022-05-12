@@ -1,4 +1,4 @@
-import { FormEvent, ChangeEvent, useState } from 'react';
+import { useState } from "react";
 import {
   Stack,
   FormControl,
@@ -10,108 +10,122 @@ import {
   Container,
   Flex,
   useToast,
-} from '@chakra-ui/react';
-import { CheckIcon } from '@chakra-ui/icons';
+} from "@chakra-ui/react";
+import { CheckIcon } from "@chakra-ui/icons";
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
-  const [state, setState] = useState('initial');
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState("initial");
   const [error, setError] = useState(false);
 
-  const toast = useToast()
+  const toast = useToast();
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+    setError(false);
+    setState("submitting");
+    setTimeout(() => {}, 2000);
+
+    // sending email to our own server/backend
+    // once we have sent the post request to the backend, we will wait the response
+    const response = await fetch("/api/subscribe", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    // 200 is http code to say OK, so if the response status isn't 200, then an error occured 
+    // (maybe the email was already in the database or something went wrong)
+    if (response.status != 200) {
+      setError(true);
+      setState("initial");
+      toast({
+        title: "Oh no an error occured! 😢 Please try again later.",
+        status: "error",
+        isClosable: true,
+      });
+      console.log("here 3");
+      console.log(error);
+      return;
+    }
+    
+    // if no error, then we can just show a success message
+    toast({
+      title: "You won't receive any spam! ✌️",
+      status: "success",
+      isClosable: true,
+    });
+    setState("success")
+  };
 
   return (
-    <Flex
-      minH={'30vh'}
-      align={'center'}
-      justify={'center'}
-    >
+    <Flex minH={"30vh"} align={"center"} justify={"center"}>
       <Container
-        maxW={'lg'}
-        bg={useColorModeValue('white', 'whiteAlpha.100')}
-        boxShadow={'xl'}
-        rounded={'lg'}
+        maxW={"lg"}
+        bg={useColorModeValue("white", "whiteAlpha.100")}
+        boxShadow={"xl"}
+        rounded={"lg"}
         p={6}
-        direction={'column'}>
+        direction={"column"}
+      >
         <Heading
-          as={'h2'}
-          fontSize={{ base: 'xl', sm: '2xl' }}
-          textAlign={'center'}
-          mb={5}>
+          as={"h2"}
+          fontSize={{ base: "xl", sm: "2xl" }}
+          textAlign={"center"}
+          mb={5}
+        >
           💌 Subscribe to my Newsletter
         </Heading>
         <Stack
-          direction={{ base: 'column', md: 'row' }}
-          as={'form'}
-          spacing={'12px'}
-          onSubmit={(e) => {
-            e.preventDefault();
-            setError(false);
-            setState('submitting');
-
-            // remove this code and implement your submit logic right here
-            setTimeout(() => {
-              if (email === 'fail@example.com') {
-                setError(true);
-                setState('initial');
-                toast({
-                    title: 'Oh no an error occured! 😢 Please try again later.',
-                    status: 'error',
-                    isClosable: true,
-                  })
-                return;
-              } 
-              
-              toast({
-                title: "You won't receive any spam! ✌️",
-                status: 'success',
-                isClosable: true,
-              })
-              setState('success');
-            }, 1000);
-          }}>
+          direction={{ base: "column", md: "row" }}
+          as={"form"}
+          spacing={"12px"}
+          onSubmit={(e) => subscribe(e)}
+        >
           <FormControl>
             <Input
-              variant={'solid'}
+              variant={"solid"}
               borderWidth={1}
-              color={'gray.800'}
+              color={"gray.800"}
               _placeholder={{
-                color: 'gray.400',
+                color: "gray.400",
               }}
-              borderColor={useColorModeValue('gray.300', 'gray.700')}
-              id={'email'}
-              type={'email'}
+              borderColor={useColorModeValue("gray.300", "gray.700")}
+              id={"email"}
+              type={"email"}
               required
-              placeholder={'Your Email'}
-              aria-label={'Your Email'}
+              placeholder={"Your Email"}
+              aria-label={"Your Email"}
               value={email}
-              disabled={state !== 'initial'}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
+              disabled={state !== "initial"}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </FormControl>
-          <FormControl w={{ base: '100%', md: '40%' }}>
+          <FormControl w={{ base: "100%", md: "40%" }}>
             <Button
-              colorScheme={state === 'success' ? 'green' : 'blue'}
-              isLoading={state === 'submitting'}
+              colorScheme={state === "success" ? "green" : "blue"}
+              isLoading={state === "submitting"}
               w="100%"
-              type={state === 'success' ? 'button' : 'submit'}>
-              {state === 'success' ? <CheckIcon /> : 'Submit'}
+              type={state === "success" ? "button" : "submit"}
+            >
+              {state === "success" ? <CheckIcon /> : "Submit"}
             </Button>
           </FormControl>
         </Stack>
         <Text
           mt={2}
-          textAlign={'center'}
-          color={error ? 'red.500' : 'gray.500'}>
+          textAlign={"center"}
+          color={error ? "red.500" : "gray.500"}
+        >
           {error
-            ? 'Oh no an error occured! 😢 Please try again later.'
+            ? "Oh no an error occured! 😢 Please try again later."
             : "You won't receive any spam! ✌️"}
         </Text>
       </Container>
     </Flex>
   );
-}
+};
 
 export default Newsletter;

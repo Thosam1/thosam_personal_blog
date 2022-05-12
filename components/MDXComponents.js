@@ -13,7 +13,8 @@ import {
   Link,
   Text,
   Divider,
-  useColorMode
+  useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { jsx } from '@emotion/react'
 import NextLink from 'next/link'
@@ -137,7 +138,7 @@ const MDXComponents = {
   br: (props) => <Box height="24px" {...props} />,
   hr: Hr,
   a: CustomLink,
-  p: (props) => <Text as="p" mt={0} lineHeight="tall" {...props} />,
+  p: (props) => <Text as="p" mt={0} lineHeight="tall" color={useColorModeValue("gray.900", "gray.300")} {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
   li: (props) => <Box as="li" pb={1} {...props} />,

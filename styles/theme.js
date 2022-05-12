@@ -7,7 +7,7 @@ import { createBreakpoints } from "@chakra-ui/theme-tools";
 // our custom fonts
 const fonts = {
   ...chakraTheme.fonts,
-  body: `'M PLUS Rounded 1c', Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`, // if first doesn't work, go to the next one on the right, etc...
+  body: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`, // if first doesn't work, go to the next one on the right, etc... // 'M PLUS Rounded 1c', 
   heading: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
 };
 

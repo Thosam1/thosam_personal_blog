@@ -46,7 +46,7 @@ const Container = ({ children }) => {
           {children}
         </Flex>
 
-        {/* <Newsletter /> */}
+        <Newsletter />
 
         {/* button scroll back to top */}
         <ScrollTopButton />
