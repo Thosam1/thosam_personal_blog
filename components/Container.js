@@ -2,7 +2,6 @@
 // -> wrap the container around everything in index.js
 // avoids rewriting same page styles
 // -> we will have the same for blog posts layouts
-
 import React from "react";
 
 // for Chakra
