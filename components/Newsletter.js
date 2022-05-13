@@ -13,6 +13,16 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 
+// method to further check if xxx@domain.something -> client side to avoid adding unnecessary contact on sendinblue
+function ValidateEmail(inputText) {
+  var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+  if (inputText.match(mailformat)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("initial");
@@ -24,7 +34,18 @@ const Newsletter = () => {
     e.preventDefault();
     setError(false);
     setState("submitting");
-    setTimeout(() => {}, 2000);
+    setTimeout(() => {}, 1000);
+
+    if(ValidateEmail(email)) {
+      setError(true);
+      setState("initial");
+      toast({
+        title: "Oh no an error occured! 😢 Please try again later.",
+        status: "error",
+        isClosable: true,
+      });
+      return;
+    }
 
     // sending email to our own server/backend
     // once we have sent the post request to the backend, we will wait the response
@@ -36,7 +57,7 @@ const Newsletter = () => {
       },
     });
 
-    // 200 is http code to say OK, so if the response status isn't 200, then an error occured 
+    // 200 is http code to say OK, so if the response status isn't 200, then an error occured
     // (maybe the email was already in the database or something went wrong)
     if (response.status != 200) {
       setError(true);
@@ -46,18 +67,18 @@ const Newsletter = () => {
         status: "error",
         isClosable: true,
       });
-      console.log("here 3");
-      console.log(error);
       return;
     }
-    
+
     // if no error, then we can just show a success message
     toast({
-      title: "You won't receive any spam! ✌️",
+      title:
+        "Thanks for signing up. If you don't receive an email shortly, double check your spam box 🙂!",
       status: "success",
       isClosable: true,
     });
-    setState("success")
+    setState("success");
+    return;
   };
 
   return (
@@ -117,11 +138,11 @@ const Newsletter = () => {
         <Text
           mt={2}
           textAlign={"center"}
-          color={error ? "red.500" : "gray.500"}
+          color={error ? "red.500" : "green.500"}
         >
           {error
             ? "Oh no an error occured! 😢 Please try again later."
-            : "You won't receive any spam! ✌️"}
+            : "Thanks for signing up. If you don't receive an email shortly, double check your spam box 🙂!"}
         </Text>
       </Container>
     </Flex>
