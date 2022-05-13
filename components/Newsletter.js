@@ -14,14 +14,18 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 
 // method to further check if xxx@domain.something -> client side to avoid adding unnecessary contact on sendinblue
-function ValidateEmail(inputText) {
-  var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+const ValidateEmail = (inputText) => {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (inputText.match(mailformat)) {
+    console.log(inputText);
+    console.log("validated");
     return true;
   } else {
+    console.log(inputText);
+    console.log("not validated");
     return false;
   }
-}
+};
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +40,7 @@ const Newsletter = () => {
     setState("submitting");
     setTimeout(() => {}, 1000);
 
-    if(ValidateEmail(email)) {
+    if (!ValidateEmail(email)) {
       setError(true);
       setState("initial");
       toast({
@@ -59,7 +63,18 @@ const Newsletter = () => {
 
     // 200 is http code to say OK, so if the response status isn't 200, then an error occured
     // (maybe the email was already in the database or something went wrong)
-    if (response.status != 200) {
+    if (response.status == 400) {
+      // case already in the mailing list
+      setError(true);
+      setState("initial");
+      toast({
+        title: "Hey you already joined the mailing list! 😎",
+        status: "error",
+        isClosable: true,
+      });
+      return;
+    } else if (response.status != 200) {
+      // some internal error
       setError(true);
       setState("initial");
       toast({
@@ -78,7 +93,7 @@ const Newsletter = () => {
       isClosable: true,
     });
     setState("success");
-    return;
+    // return;
   };
 
   return (
@@ -135,14 +150,15 @@ const Newsletter = () => {
             </Button>
           </FormControl>
         </Stack>
+
         <Text
           mt={2}
           textAlign={"center"}
-          color={error ? "red.500" : "green.500"}
+          color={error ? "red.500" : "gray.400"}
         >
           {error
             ? "Oh no an error occured! 😢 Please try again later."
-            : "Thanks for signing up. If you don't receive an email shortly, double check your spam box 🙂!"}
+            : "Sign up for my monthly newsletter, I will send you interesting ideas and what I have been working on 🙂"}
         </Text>
       </Container>
     </Flex>
