@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 // for Chakra
 import {
@@ -6,7 +7,17 @@ import {
   Button, // to separate in a different file
   Flex,
   Box,
+  Switch,
+  IconButton,
+  useDisclosure,
+  useColorModeValue,
+  HStack,
+  Links,
+  Stack,
 } from "@chakra-ui/react";
+
+//icons for mobile version
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 // for links in Navbar
 import NextLink from "next/link";
@@ -24,11 +35,8 @@ const Navbar = () => {
   // for customizing based on light mode vs dark mode -> dynamically
   const { colorMode } = useColorMode();
 
-  // no need since defined in _app.js
-  // const bgColor = {
-  //   light: "#F7FAFC",
-  //   dark: "#171717",
-  // };
+  // to switch navbar between mobile and desktop version
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const color = {
     light: "RGBA(0, 0, 0, 0.90)",
@@ -49,13 +57,9 @@ const Navbar = () => {
     transition: height 0.5s, line-height 0.5s;
   `;
 
-  return (
-    <motion.div
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
-      <StickyNav
+  const DesktopVersion = () => {
+    return (
+      <Flex
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
@@ -70,6 +74,7 @@ const Navbar = () => {
         mb={[0, 0, 8]}
         mx="auto"
         color={color[colorMode]}
+        display={{ base: "none", md: "flex" }}
       >
         <Box>
           <NextLink href="/" passHref>
@@ -112,29 +117,89 @@ const Navbar = () => {
               Blog
             </Button>
           </NextLink>
-          {/* <NextLink href="/youtube" passHref>
-            <Button
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-            >
-              Youtube
-            </Button>
-          </NextLink> */}
-          {/* <NextLink href="/stats" passHref>
-            <Button
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-            >
-              Stats
-            </Button>
-          </NextLink> */}
         </Box>
         <DarkModeSwitch />
-      </StickyNav>
+      </Flex>
+    );
+  };
+
+  const MobileVersion = () => {
+    return (
+      <>
+        <Box px={8} py={2} mt={8} size={"md"} display={{ md: "none" }}> 
+          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+            <IconButton
+              size={"md"}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={"Open Menu"}
+              display={{ md: "none" }}
+              onClick={isOpen ? onClose : onOpen}
+              color={useColorModeValue("black", "white")}
+              borderColor={useColorModeValue("gray.200", "")}
+              borderWidth={useColorModeValue("1px", "")}
+            />
+            <DarkModeSwitch />
+          </Flex>
+
+          {isOpen ? (
+            <Box pb={4} display={{ md: "none" }} color={color[colorMode]}>
+              <Stack as={"nav"} spacing={4}>
+                <NextLink href="/" passHref>
+                  <Button
+                    as="a"
+                    variant="ghost"
+                    p={[1, 2, 4]}
+                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                  >
+                    Home
+                  </Button>
+                </NextLink>
+                <NextLink href="/about" passHref>
+                  <Button
+                    as="a"
+                    variant="ghost"
+                    p={[1, 2, 4]}
+                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                  >
+                    About
+                  </Button>
+                </NextLink>
+                <NextLink href="/portfolio" passHref>
+                  <Button
+                    as="a"
+                    variant="ghost"
+                    p={[1, 2, 4]}
+                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                  >
+                    Portfolio
+                  </Button>
+                </NextLink>
+                <NextLink href="/blog" passHref>
+                  <Button
+                    as="a"
+                    variant="ghost"
+                    p={[1, 2, 4]}
+                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                  >
+                    Blog
+                  </Button>
+                </NextLink>
+              </Stack>
+            </Box>
+          ) : null}
+        </Box>
+      </>
+    );
+  };
+
+  return (
+    <motion.div
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7 }}
+    >
+      <DesktopVersion />
+      <MobileVersion />
     </motion.div>
   );
 };

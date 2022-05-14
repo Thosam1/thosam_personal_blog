@@ -97,7 +97,7 @@ const Newsletter = () => {
   };
 
   return (
-    <Flex minH={"30vh"} align={"center"} justify={"center"}>
+    <Flex minH={"30vh"} align={"center"} justify={"center"} px={6}>
       <Container
         maxW={"lg"}
         bg={useColorModeValue("white", "whiteAlpha.100")}

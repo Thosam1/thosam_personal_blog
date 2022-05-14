@@ -36,7 +36,7 @@ const Footer = () => {
       mt={10}
       align="center"
     >
-      <Divider maxWidth={400} />
+      <Divider maxWidth={400} bgColor={useColorModeValue("gray.500", "gray.900")}/>
       <Flex align="center" my={4} direction="column" pt={4}>
         <div>
           <Link
