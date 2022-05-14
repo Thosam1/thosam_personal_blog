@@ -44,6 +44,7 @@ export default function ProjectCard({
             <Stack direction={"row"} spacing={3}>
               {tags.map((tag) => (
                 <Text
+                  key={tag}
                   color={"green.500"}
                   textTransform={"uppercase"}
                   fontWeight={800}

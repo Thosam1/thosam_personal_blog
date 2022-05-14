@@ -22,9 +22,9 @@ const SkillCards = () => {
     <MotionBox variants={container} initial="hidden" animate="visible">
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {skillsList().map((object, index) => (
-          <FadeInWrapper>
+          <FadeInWrapper key={object.name}>
             <SkillCard
-              key={index}
+              key={object.name}
               name={object.name}
               description={object.description}
               image={object.image}

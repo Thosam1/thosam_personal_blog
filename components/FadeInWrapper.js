@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 // wrapper for fade in animation
-export default FadeInWrapper = ({children}) => {
+export const FadeInWrapper = ({children}) => {
     return (<motion.div
       initial="hidden"
       whileInView="visible"
@@ -15,3 +15,5 @@ export default FadeInWrapper = ({children}) => {
       {children}
     </motion.div>)
   };
+
+  export default FadeInWrapper;

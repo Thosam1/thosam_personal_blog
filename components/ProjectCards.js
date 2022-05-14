@@ -31,7 +31,7 @@ const ProjectCards = ({ featured }) => {
           return;
         }
         return (
-          <FadeInWrapper>
+          <FadeInWrapper key={object.title}>
             <ProjectCard
               key={object.title}
               title={object.title}

@@ -98,8 +98,6 @@ export default function Index() {
             <Stack direction={"row"} align={"center"}>
               <Link href="/portfolio" title="portfolio">
                 <Button
-                  data-splitbee-event="Button Click"
-                  data-splitbee-event-type="Resume"
                   mt={5}
                 >
                   My works 💻
@@ -173,8 +171,6 @@ export default function Index() {
 
               <Link href="/about">
                 <Button
-                  data-splitbee-event="Button Click"
-                  data-splitbee-event-type="Resume"
                   mt={5}
                   mb={10}
                 >
@@ -204,8 +200,6 @@ export default function Index() {
               <FadeInWrapper>
               <Link href="/portfolio">
               <Button
-                data-splitbee-event="Button Click"
-                data-splitbee-event-type="Resume"
                 mt={5}
                 mb={10}
               >

@@ -17,7 +17,7 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
   }
 
   return (
-    <NextLink href={`blog/${slug}`} passHref>
+    <NextLink href={`/blog/${slug}`} _hover={{ textDecoration: "none" }} passHref>
       <Link w="100%" _hover={{ textDecoration: "none" }}>
         <Box 
         p={5}

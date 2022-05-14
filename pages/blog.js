@@ -113,7 +113,7 @@ export default function Blog({ posts }) {
 
             <VStack spacing={6}>
               {filteredBlogPosts.map((frontMatter) => (
-                <FadeInWrapper>
+                <FadeInWrapper key={frontMatter.title}>
                 <BlogPost key={frontMatter.title} {...frontMatter} />
                 </FadeInWrapper>
               ))}
