@@ -114,7 +114,7 @@ export default function Index() {
             >
               <AspectRatio ratio={16 / 9}>
                 <iframe
-                  src="https://www.youtube.com/embed/IY25_P40beA?autoplay=1"
+                  src="https://www.youtube.com/embed/IY25_P40beA" // ?autoplay=1 // i put this to 0 to avoid using network resources and optimize website speed
                   alt="Featured YouTube video"
                   allowFullScreen={true}
                   style={{ borderRadius: 10 }}
