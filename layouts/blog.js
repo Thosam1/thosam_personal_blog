@@ -14,7 +14,6 @@ import {
   Flex,
   Stack,
   Avatar,
-  HStack,
 } from "@chakra-ui/react";
 
 // our custom components

@@ -2,6 +2,8 @@ import { SimpleGrid } from "@chakra-ui/react";
 import { MotionBox } from "./MotionBox";
 import CourseCard from "./CourseCard";
 
+import { FadeInWrapper } from "./FadeInWrapper";
+
 // course arrays
 import BA1List from "../data/portfolio/education/BA1List";
 import BA2List from "../data/portfolio/education/BA2List";
@@ -16,7 +18,7 @@ const correctList = (semester) => {
       return BA2List();
     case "3":
       return BA3List();
-    case"4":
+    case "4":
       return BA4List();
     default:
       return BA1List();
@@ -35,21 +37,23 @@ const container = {
   },
 };
 
-const CourseCards = ({semester}) => {
-    const array = correctList(semester);
+const CourseCards = ({ semester }) => {
+  const array = correctList(semester);
 
   return (
     <MotionBox variants={container} initial="hidden" animate="visible">
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {array.map((object, index) => (
-          <CourseCard
-            key={index}
-            name={object.name}
-            code={object.code}
-            link={object.link}
-            credits={object.credits}
-            type={object.type}
-          />
+          <FadeInWrapper>
+            <CourseCard
+              key={index}
+              name={object.name}
+              code={object.code}
+              link={object.link}
+              credits={object.credits}
+              type={object.type}
+            />
+          </FadeInWrapper>
         ))}
       </SimpleGrid>
     </MotionBox>

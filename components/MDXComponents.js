@@ -4,7 +4,6 @@
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React from 'react'
 import {
   Box,
   Alert,
@@ -15,9 +14,10 @@ import {
   Divider,
   useColorMode,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { jsx } from '@emotion/react'
-import NextLink from 'next/link'
+} from "@chakra-ui/react";
+import { jsx } from "@emotion/react";
+import NextLink from "next/link";
+import FadeInWrapper from "./FadeInWrapper";
 
 // Link component
 const CustomLink = (props) => {
@@ -126,23 +126,34 @@ const Hr = () => {
 
 // Declaring components here :
 const MDXComponents = {
-  h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,
-  h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,
-  h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
-  h4: (props) => <DocsHeading as="h4" size="sm" fontWeight="bold" {...props} />,
-  h5: (props) => <DocsHeading as="h5" size="sm" fontWeight="bold" {...props} />,
-  h6: (props) => <DocsHeading as="h6" size="xs" fontWeight="bold" {...props} />,
+  h1: (props) => <FadeInWrapper><Heading as="h1" size="xl" my={4} {...props} /></FadeInWrapper>,
+  h2: (props) => <FadeInWrapper><DocsHeading as="h2" size="lg" fontWeight="bold" {...props} /></FadeInWrapper>,
+  h3: (props) => <FadeInWrapper><DocsHeading as="h3" size="md" fontWeight="bold" {...props} /></FadeInWrapper>,
+  h4: (props) => <FadeInWrapper><DocsHeading as="h4" size="sm" fontWeight="bold" {...props} /></FadeInWrapper>,
+  h5: (props) => <FadeInWrapper><DocsHeading as="h5" size="sm" fontWeight="bold" {...props} /></FadeInWrapper>,
+  h6: (props) => <FadeInWrapper><DocsHeading as="h6" size="xs" fontWeight="bold" {...props} /></FadeInWrapper>,
   inlineCode: (props) => (
-    <Code colorScheme="yellow" fontSize="0.84em" {...props} />
+    <FadeInWrapper><Code colorScheme="yellow" fontSize="0.84em" {...props} /></FadeInWrapper>
   ),
-  br: (props) => <Box height="24px" {...props} />,
-  hr: Hr,
+  br: (props) => <FadeInWrapper><Box height="24px" {...props} /></FadeInWrapper>,
+  hr: <FadeInWrapper>Hr</FadeInWrapper>,
   a: CustomLink,
-  p: (props) => <Text as="p" mt={0} lineHeight="tall" color={useColorModeValue("gray.900", "gray.300")} {...props} />,
-  ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
-  ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
-  li: (props) => <Box as="li" pb={1} {...props} />,
-  blockquote: Quote,
+  p: (props) => (
+    <FadeInWrapper>
+    <Text
+      as="p"
+      mt={0}
+      lineHeight="tall"
+      color={useColorModeValue("gray.900", "gray.300")}
+      {...props}
+    />
+    </FadeInWrapper>
+  ),
+  ul: (props) => <FadeInWrapper><Box as="ul" pt={2} pl={4} ml={2} {...props} /></FadeInWrapper>,
+  ol: (props) => <FadeInWrapper><Box as="ol" pt={2} pl={4} ml={2} {...props} /></FadeInWrapper>,
+  li: (props) => <FadeInWrapper><Box as="li" pb={1} {...props} /></FadeInWrapper>,
+  blockquote: <FadeInWrapper>Quote</FadeInWrapper>,
 };
 
 export default MDXComponents;
+

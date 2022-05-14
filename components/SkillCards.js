@@ -3,6 +3,8 @@ import { MotionBox } from "./MotionBox";
 import skillsList from "../data/portfolio/skillsList";
 import SkillCard from "./SkillCard";
 
+import { FadeInWrapper } from "./FadeInWrapper";
+
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -17,18 +19,20 @@ const container = {
 
 const SkillCards = () => {
   return (
-      <MotionBox variants={container} initial="hidden" animate="visible">
-        <SimpleGrid columns={[1, 1, 2]} spacing={4}>
-          {skillsList().map((object, index) => (
+    <MotionBox variants={container} initial="hidden" animate="visible">
+      <SimpleGrid columns={[1, 1, 2]} spacing={4}>
+        {skillsList().map((object, index) => (
+          <FadeInWrapper>
             <SkillCard
               key={index}
               name={object.name}
               description={object.description}
               image={object.image}
             />
-          ))}
-        </SimpleGrid>
-      </MotionBox>
+          </FadeInWrapper>
+        ))}
+      </SimpleGrid>
+    </MotionBox>
   );
 };
 

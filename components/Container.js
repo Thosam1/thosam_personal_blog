@@ -13,6 +13,8 @@ import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 import ScrollTopButton from "./ScrollTopButton";
 
+import { FadeInWrapper } from "./FadeInWrapper";
+
 const Container = ({ children }) => {
   // for customizing based on light mode vs dark mode -> dynamically
   const { colorMode } = useColorMode();
@@ -41,13 +43,12 @@ const Container = ({ children }) => {
         px={[0, 4, 4]}
         mt={[4, 8, 4]}
       >
-        
         <Flex px={4} flexDir="column" minH="90vh">
-        
           {children}
         </Flex>
-
-        <Newsletter />
+        <FadeInWrapper>
+          <Newsletter />
+        </FadeInWrapper>
 
         {/* button scroll back to top */}
         <ScrollTopButton />

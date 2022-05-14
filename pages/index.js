@@ -1,5 +1,4 @@
 /* Main/Root - Home screen */
-
 import Head from "next/head";
 
 // more chakra ui elements
@@ -21,6 +20,7 @@ import ProjectCards from "../components/ProjectCards";
 
 // animations
 import { motion } from "framer-motion";
+import { FadeInWrapper } from "../components/FadeInWrapper";
 
 // SEO
 import { NextSeo } from "next-seo";
@@ -60,6 +60,7 @@ export default function Index() {
           <title>Home - Thösam Norlha-Tsang</title>
         </Head>
 
+<FadeInWrapper>
         <Flex
           w="100%"
           flexDir={["column", "column", "row"]}
@@ -124,6 +125,7 @@ export default function Index() {
             </motion.div>
           </Box>
         </Flex>
+        </FadeInWrapper>
 
         <Stack
           as="main"
@@ -142,6 +144,7 @@ export default function Index() {
             maxWidth="800px"
           >
             {/* About me */}
+            <FadeInWrapper>
             <Box as="section" mt={10} mb={10}>
               <Heading
                 letterSpacing="tight"
@@ -179,9 +182,11 @@ export default function Index() {
                 </Button>
               </Link>
             </Box>
+            </FadeInWrapper>
 
-            {/* About me */}
+            {/* Featured Projects */}
             <Box as="section" mt={10} mb={20}>
+            <FadeInWrapper>
               <Heading
                 letterSpacing="tight"
                 mt={8}
@@ -192,9 +197,11 @@ export default function Index() {
               >
                 Featured Projects
               </Heading>
+              </FadeInWrapper>
 
               <ProjectCards featured={true} />
 
+              <FadeInWrapper>
               <Link href="/portfolio">
               <Button
                 data-splitbee-event="Button Click"
@@ -205,6 +212,7 @@ export default function Index() {
                 Wanna see more ? 😄
               </Button>
               </Link>
+              </FadeInWrapper>
             </Box>
           </Flex>
         </Stack>

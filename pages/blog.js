@@ -23,6 +23,7 @@ import { getAllFilesFrontMatter } from "../lib/mdx";
 
 // SEO
 import { NextSeo } from "next-seo";
+import { FadeInWrapper } from "../components/FadeInWrapper";
 
 const url = "https://thosam.vercel.app/blog";
 const title = "Blog - Thösam Norlha-Tsang";
@@ -68,6 +69,8 @@ export default function Blog({ posts }) {
       <Head>
         <title>Blog - Thösam Norlha-Tsang</title>
       </Head>
+
+      <FadeInWrapper>
       <Container>
         <Stack
           as="main"
@@ -110,12 +113,15 @@ export default function Blog({ posts }) {
 
             <VStack spacing={6}>
               {filteredBlogPosts.map((frontMatter) => (
+                <FadeInWrapper>
                 <BlogPost key={frontMatter.title} {...frontMatter} />
+                </FadeInWrapper>
               ))}
             </VStack>
           </Flex>
         </Stack>
       </Container>
+      </FadeInWrapper>
     </>
   );
 }
