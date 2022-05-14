@@ -11,6 +11,7 @@ import {
   Input,
   InputGroup,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 // custom components
@@ -44,7 +45,7 @@ const SEO = {
 export default function Blog({ posts }) {
   const { colorMode } = useColorMode();
   const input_Bg = {
-    light: "black",
+    light: "gray.200",
     dark: "#202020", // "blackAlpha.500", -> with contrast cannot see
   };
 
@@ -100,7 +101,8 @@ export default function Blog({ posts }) {
                 p="15px"
                 bg={input_Bg[colorMode]} 
                 borderRadius="10px"
-                color={"white"}
+                color={useColorModeValue("black", "white")}
+                _placeholder={{ color: useColorModeValue("gray.700", "gray.300") }}
               />
             </InputGroup>
 
