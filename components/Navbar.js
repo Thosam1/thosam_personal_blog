@@ -30,6 +30,7 @@ import DarkModeSwitch from "./DarkModeSwitch";
 
 // animations <3
 import { motion } from "framer-motion";
+import { FadeInWrapper } from "./FadeInWrapper";
 
 const Navbar = () => {
   // for customizing based on light mode vs dark mode -> dynamically
@@ -126,7 +127,7 @@ const Navbar = () => {
   const MobileVersion = () => {
     return (
       <>
-        <Box px={8} py={2} mt={8} size={"md"} display={{ md: "none" }}> 
+        <Box px={8} py={2} mt={8} size={"md"} display={{ md: "none" }}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <IconButton
               size={"md"}
@@ -142,50 +143,52 @@ const Navbar = () => {
           </Flex>
 
           {isOpen ? (
-            <Box pb={4} display={{ md: "none" }} color={color[colorMode]}>
-              <Stack as={"nav"} spacing={4}>
-                <NextLink href="/" passHref>
-                  <Button
-                    as="a"
-                    variant="ghost"
-                    p={[1, 2, 4]}
-                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
-                  >
-                    Home
-                  </Button>
-                </NextLink>
-                <NextLink href="/about" passHref>
-                  <Button
-                    as="a"
-                    variant="ghost"
-                    p={[1, 2, 4]}
-                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
-                  >
-                    About
-                  </Button>
-                </NextLink>
-                <NextLink href="/portfolio" passHref>
-                  <Button
-                    as="a"
-                    variant="ghost"
-                    p={[1, 2, 4]}
-                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
-                  >
-                    Portfolio
-                  </Button>
-                </NextLink>
-                <NextLink href="/blog" passHref>
-                  <Button
-                    as="a"
-                    variant="ghost"
-                    p={[1, 2, 4]}
-                    _hover={{ backgroundColor: navHoverBg[colorMode] }}
-                  >
-                    Blog
-                  </Button>
-                </NextLink>
-              </Stack>
-            </Box>
+            <FadeInWrapper>
+              <Box pb={4} display={{ md: "none" }} color={color[colorMode]}>
+                <Stack as={"nav"} spacing={4}>
+                  <NextLink href="/" passHref>
+                    <Button
+                      as="a"
+                      variant="ghost"
+                      p={[1, 2, 4]}
+                      _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                    >
+                      Home
+                    </Button>
+                  </NextLink>
+                  <NextLink href="/about" passHref>
+                    <Button
+                      as="a"
+                      variant="ghost"
+                      p={[1, 2, 4]}
+                      _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                    >
+                      About
+                    </Button>
+                  </NextLink>
+                  <NextLink href="/portfolio" passHref>
+                    <Button
+                      as="a"
+                      variant="ghost"
+                      p={[1, 2, 4]}
+                      _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                    >
+                      Portfolio
+                    </Button>
+                  </NextLink>
+                  <NextLink href="/blog" passHref>
+                    <Button
+                      as="a"
+                      variant="ghost"
+                      p={[1, 2, 4]}
+                      _hover={{ backgroundColor: navHoverBg[colorMode] }}
+                    >
+                      Blog
+                    </Button>
+                  </NextLink>
+                </Stack>
+              </Box>
+            </FadeInWrapper>
           ) : null}
         </Box>
       </>
