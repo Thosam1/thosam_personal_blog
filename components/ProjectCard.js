@@ -36,7 +36,7 @@ export default function ProjectCard({
         >
           {/* rendering all images in a carousel */}
           <Box h={"320px"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-            <Image src={images[0]} objectFit="cover" layout={"fill"} />
+            <Image src={images[0]} objectFit="cover" layout={"fill"} alt={images[0]}/>
           </Box>
 
           <Stack>
