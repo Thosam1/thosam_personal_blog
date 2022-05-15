@@ -63,7 +63,7 @@ export default function ProjectCard({
             >
               {title}
             </Heading>
-            <Text color={"gray.500"}>{description}</Text>
+            <Text color={"gray.400"}>{description}</Text>
           </Stack>
           <Stack mt={6} direction={"row"} spacing={6} align={"center"} >
             {demoLink && (

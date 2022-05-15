@@ -118,6 +118,7 @@ export default function Index() {
                   alt="Featured YouTube video"
                   allowFullScreen={true}
                   style={{ borderRadius: 10 }}
+                  title="Something Just Like This - Fingerstyle Cover"
                 />
               </AspectRatio>
             </motion.div>
