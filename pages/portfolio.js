@@ -1,5 +1,6 @@
 /* Portfolio - page */
 import Head from "next/head";
+import Image from "next/image";
 
 import { useEffect } from "react";
 
@@ -15,8 +16,10 @@ import {
   Link,
   useColorModeValue,
   Icon,
-  Image,
+  // Image,
 } from "@chakra-ui/react";
+
+import { ChakraNextImage } from "../components/ChakraNextImage";
 
 // components
 import Container from "../components/Container"; // wrapper of pages
@@ -132,13 +135,16 @@ const Portfolio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.7 }}
               >
-                <Image
-                  src={"/images/thosam_auth_image.jpg"}
-                  style={{ borderRadius: 10 }}
-                  maxH="600px"
-                  objectFit="cover"
-                  alt="me :)"
-                />
+                {/* <Box position="relative" maxH="600px">
+                  <Image
+                    src={"/images/thosam_auth_image.jpg"}
+                    style={{ borderRadius: 10 }}
+                    // maxH="600px"
+                    // objectFit="cover"
+                    alt="me :)"
+                  />
+                </Box> */}
+                <ChakraNextImage src={"/images/thosam_auth_image.jpg"} h="600px" minW="400px" maxW="450px" objectFit="cover" alt="me :)"/>
               </motion.div>
             </Box>
           </Flex>
@@ -259,119 +265,119 @@ const Portfolio = () => {
 
             {/* Education */}
             <Box as="section" mt={10} mb={10} align="center">
-            <FadeInWrapper>
-              <Heading
-                letterSpacing="tight"
-                size="2xl"
-                fontWeight={700}
-                as="h2"
-                alignSelf={"center"}
-              >
-                Education
-              </Heading>
+              <FadeInWrapper>
+                <Heading
+                  letterSpacing="tight"
+                  size="2xl"
+                  fontWeight={700}
+                  as="h2"
+                  alignSelf={"center"}
+                >
+                  Education
+                </Heading>
               </FadeInWrapper>
 
               {/* <MdOutlineSchool size="40px" /> */}
 
               {/* <MdOutlineSchool size="40px" /> */}
               <FadeInWrapper>
-              <Heading
-                letterSpacing="tight"
-                mt={8}
-                size="lg"
-                fontWeight={700}
-                as="h2"
-                mb={7}
-              >
-                EPFL - Bachelor of Computer Science
-              </Heading>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="lg"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  EPFL - Bachelor of Computer Science
+                </Heading>
               </FadeInWrapper>
 
               <FadeInWrapper>
-              <Heading
-                letterSpacing="tight"
-                mt={8}
-                size="md"
-                fontWeight={700}
-                as="h2"
-                mb={7}
-              >
-                EPFL - Year 1 - Semester 1
-              </Heading>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="md"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  EPFL - Year 1 - Semester 1
+                </Heading>
               </FadeInWrapper>
               <CourseCards semester={"1"} />
-              
+
               <FadeInWrapper>
-              <Heading
-                letterSpacing="tight"
-                mt={8}
-                size="md"
-                fontWeight={700}
-                as="h2"
-                mb={7}
-              >
-                EPFL - Year 1 - Semester 2
-              </Heading>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="md"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  EPFL - Year 1 - Semester 2
+                </Heading>
               </FadeInWrapper>
               <CourseCards semester={"2"} />
 
               <FadeInWrapper>
-              <Heading
-                letterSpacing="tight"
-                mt={8}
-                size="md"
-                fontWeight={700}
-                as="h2"
-                mb={7}
-              >
-                EPFL - Year 2 - Semester 1
-              </Heading>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="md"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  EPFL - Year 2 - Semester 1
+                </Heading>
               </FadeInWrapper>
               <CourseCards semester={"3"} />
 
               <FadeInWrapper>
-              <Heading
-                letterSpacing="tight"
-                mt={8}
-                size="md"
-                fontWeight={700}
-                as="h2"
-                mb={7}
-              >
-                EPFL - Year 2 - Semester 2
-              </Heading>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="md"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  EPFL - Year 2 - Semester 2
+                </Heading>
               </FadeInWrapper>
               <CourseCards semester={"4"} />
             </Box>
 
             {/* Contact Me */}
             <FadeInWrapper>
-            <Box as="section" mt={10} mb={10}>
-              <Heading
-                letterSpacing="tight"
-                mt={8}
-                size="lg"
-                fontWeight={700}
-                as="h2"
-                mb={7}
-              >
-                Contact Me
-              </Heading>
-              <Link
-                href="mailto:thosamthosamthosam@gmail.com"
-                title="Email"
-                isExternal
-              >
-                <Button
-                  data-splitbee-event="Button Click"
-                  data-splitbee-event-type="Resume"
-                  mt={5}
-                  leftIcon={<FiMail />}
+              <Box as="section" mt={10} mb={10}>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="lg"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
                 >
-                  Contact me
-                </Button>
-              </Link>
-            </Box>
+                  Contact Me
+                </Heading>
+                <Link
+                  href="mailto:thosamthosamthosam@gmail.com"
+                  title="Email"
+                  isExternal
+                >
+                  <Button
+                    data-splitbee-event="Button Click"
+                    data-splitbee-event-type="Resume"
+                    mt={5}
+                    leftIcon={<FiMail />}
+                  >
+                    Contact me
+                  </Button>
+                </Link>
+              </Box>
             </FadeInWrapper>
           </Flex>
         </Stack>
