@@ -18,9 +18,6 @@ import {
 import Container from "../components/Container"; // wrapper of pages
 import ProjectCards from "../components/ProjectCards";
 
-// animations
-import { motion } from "framer-motion";
-
 // SEO
 import { NextSeo } from "next-seo";
 
@@ -101,21 +98,15 @@ export default function Index() {
           </Flex>
           {/* youtube featured video */}
           <Box mt={[10, 10, 0]} w={["100%", "100%", "50%"]}>
-            <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 1.6 }}
-            >
-              <AspectRatio ratio={16 / 9}>
-                <iframe
-                  src="https://www.youtube.com/embed/IY25_P40beA" // ?autoplay=1 // i put this to 0 to avoid using network resources and optimize website speed
-                  alt="Featured YouTube video"
-                  allowFullScreen={true}
-                  style={{ borderRadius: 10 }}
-                  title="Something Just Like This - Fingerstyle Cover"
-                />
-              </AspectRatio>
-            </motion.div>
+            <AspectRatio ratio={16 / 9}>
+              <iframe
+                src="https://www.youtube.com/embed/IY25_P40beA" // ?autoplay=1 // i put this to 0 to avoid using network resources and optimize website speed
+                alt="Featured YouTube video"
+                allowFullScreen={true}
+                style={{ borderRadius: 10 }}
+                title="Something Just Like This - Fingerstyle Cover"
+              />
+            </AspectRatio>
           </Box>
         </Flex>
 
