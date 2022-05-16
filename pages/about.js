@@ -59,16 +59,6 @@ const About = () => {
     dark: "gray.400",
   };
 
-  const borderIcon = {
-    light: "gray.400",
-    dark: "gray.500",
-  };
-
-  const footerHoverBg = {
-    light: "gray.100",
-    dark: "gray.700",
-  };
-
   return (
     <>
       <NextSeo {...SEO} />
@@ -79,7 +69,6 @@ const About = () => {
           </Head>
           <Flex
             w="100%"
-            // h="400px"
             flexDir={["column", "column", "row"]}
             align="center"
             px={4}

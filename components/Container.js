@@ -19,12 +19,6 @@ const Container = ({ children }) => {
   // for customizing based on light mode vs dark mode -> dynamically
   const { colorMode } = useColorMode();
 
-  // no need to override here since already done in _app.js
-  // const bgColor = {
-  //   light: "#F7FAFC",
-  //   dark: "hsl(200, 7%, 8%)",
-  // };
-
   const color = {
     light: "RGBA(0, 0, 0, 0.90)", // "gray.700",
     dark: "white",
@@ -38,7 +32,6 @@ const Container = ({ children }) => {
         as="main"
         justifyContent="center"
         flexDirection="column"
-        // bg={bgColor[colorMode]} // bg color
         color={color[colorMode]} // text color
         px={[0, 4, 4]}
         mt={[4, 8, 4]}

@@ -32,7 +32,6 @@ import { FadeInWrapper } from "../components/FadeInWrapper";
 // icon
 import { GrBlockQuote } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
-import { MdOutlineSchool } from "react-icons/md";
 
 // SEO
 import { NextSeo } from "next-seo";

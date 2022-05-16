@@ -9,8 +9,6 @@ import {
   IconButton,
   useDisclosure,
   useColorModeValue,
-  HStack,
-  Links,
   Stack,
 } from "@chakra-ui/react";
 
@@ -53,7 +51,6 @@ const Navbar = () => {
         maxWidth="800px"
         minWidth="356px"
         width="100%"
-        // bg={bgColor[colorMode]}
         as="nav"
         px={[2, 6, 6]}
         py={2}
