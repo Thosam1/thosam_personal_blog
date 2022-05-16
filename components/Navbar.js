@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 // for Chakra
 import {
@@ -7,7 +6,6 @@ import {
   Button, // to separate in a different file
   Flex,
   Box,
-  Switch,
   IconButton,
   useDisclosure,
   useColorModeValue,
@@ -185,8 +183,14 @@ const Navbar = () => {
 
   return (
     <>
-      <DesktopVersion />
-      <MobileVersion />
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
+      >
+        <DesktopVersion />
+        <MobileVersion />
+      </motion.div>
     </>
   );
 };

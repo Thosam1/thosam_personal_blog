@@ -11,14 +11,9 @@ import {
   Button, // base
   Box, // extensions
   Link,
-  useColorModeValue,
-  SimpleGrid,
-  Icon,
-  Divider,
-  AspectRatio,
-  Image,
-  IconButton,
 } from "@chakra-ui/react";
+
+import { ChakraNextImage } from "../components/ChakraNextImage";
 
 // animation
 import { FadeInWrapper } from "../components/FadeInWrapper";
@@ -165,10 +160,12 @@ const About = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.7 }}
               >
-                <Image
+                <ChakraNextImage
+                  ml={4}
                   src={"/images/thosam_auth_image.jpg"}
-                  style={{ borderRadius: 10 }}
-                  maxH="600px"
+                  h="600px"
+                  minW="400px"
+                  maxW="450px"
                   objectFit="cover"
                   alt="me :)"
                 />

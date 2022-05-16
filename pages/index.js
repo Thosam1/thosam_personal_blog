@@ -23,6 +23,7 @@ import { motion } from "framer-motion";
 
 // SEO
 import { NextSeo } from "next-seo";
+import FadeInWrapper from "../components/FadeInWrapper";
 
 const url = "https://thosam.vercel.app/";
 const title = "Thösam Norlha-Tsang";
@@ -59,6 +60,7 @@ export default function Index() {
           <title>Home - Thösam Norlha-Tsang</title>
         </Head>
 
+<FadeInWrapper>
         <Flex
           w="100%"
           flexDir={["column", "column", "row"]}
@@ -118,6 +120,7 @@ export default function Index() {
             </motion.div>
           </Box>
         </Flex>
+</FadeInWrapper>
 
         <Stack
           as="main"
@@ -136,6 +139,7 @@ export default function Index() {
             maxWidth="800px"
           >
             {/* About me */}
+            <FadeInWrapper>
             <Box as="section" mt={10} mb={10}>
               <Heading
                 letterSpacing="tight"
@@ -168,8 +172,10 @@ export default function Index() {
                 </Button>
               </Link>
             </Box>
+            </FadeInWrapper>
 
             {/* Featured Projects */}
+            <FadeInWrapper>
             <Box as="section" mt={10} mb={20}>
               <Heading
                 letterSpacing="tight"
@@ -190,6 +196,8 @@ export default function Index() {
                 </Button>
               </Link>
             </Box>
+            </FadeInWrapper>
+            
           </Flex>
         </Stack>
       </Container>

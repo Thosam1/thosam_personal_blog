@@ -46,14 +46,18 @@ const Container = ({ children }) => {
         <Flex px={4} flexDir="column" minH="90vh">
           {children}
         </Flex>
-        <Newsletter />
+        <FadeInWrapper>
+          <Newsletter />
+        </FadeInWrapper>
 
         {/* button scroll back to top */}
         <ScrollTopButton />
       </Flex>
 
       {/* Footer should take whole space */}
-      <Footer />
+      <FadeInWrapper>
+        <Footer />
+      </FadeInWrapper>
     </>
   );
 };

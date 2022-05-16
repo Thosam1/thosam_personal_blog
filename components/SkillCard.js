@@ -1,11 +1,6 @@
-import {
-  VStack,
-  HStack,
-  Text,
-  useColorModeValue,
-  Box,
-  Image,
-} from "@chakra-ui/react";
+import Image from "next/image";
+import { VStack, HStack, Text, useColorModeValue, Box } from "@chakra-ui/react";
+
 import { MotionBox } from "./MotionBox";
 
 const SkillCard = ({ name, image, link, description }) => {
@@ -39,13 +34,7 @@ const SkillCard = ({ name, image, link, description }) => {
             right={0}
             opacity={0.25}
           ></Box>
-          <Image
-            src={image}
-            height={26}
-            width={26}
-            layout="fixed"
-            rounded="md"
-          />
+          <Image alt={image} src={image} height={26} width={26} />
         </Box>
         <VStack
           align="start"
