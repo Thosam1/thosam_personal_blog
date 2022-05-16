@@ -1,7 +1,7 @@
 import { SimpleGrid } from "@chakra-ui/react";
 
 // for animation
-// import { FadeInWrapper } from "./FadeInWrapper";
+import { FadeInWrapper } from "./FadeInWrapper";
 
 // getting array containing all projects
 import projectsList from "../data/portfolio/projectsList";
