@@ -15,6 +15,8 @@ import { Global, css } from "@emotion/react";
 // importing prism light and dark theme for code snippets
 import { prismLightTheme, prismDarkTheme } from "../styles/prism";
 
+import "@fontsource/inter";
+
 // our custom bg style
 import { bgColor } from "../styles/theme_color_schemes";
 
