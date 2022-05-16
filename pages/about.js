@@ -18,8 +18,6 @@ import { ChakraNextImage } from "../components/ChakraNextImage";
 // animation
 import { FadeInWrapper } from "../components/FadeInWrapper";
 
-// import Image from "next/image";
-
 // components
 import Container from "../components/Container"; // wrapper of pages
 
@@ -151,7 +149,7 @@ const About = () => {
               >
                 <ChakraNextImage
                   ml={4}
-                  src={"/images/thosam_auth_image.jpg"}
+                  src={"/images/thosam_auth_image.webp"}
                   h="600px"
                   minW="400px"
                   maxW="450px"

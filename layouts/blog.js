@@ -70,7 +70,7 @@ export default function BlogLayout({ children, frontMatter }) {
               <Avatar
                 size="xs"
                 name="Thösam Norlha-Tsang"
-                src="../images/thosam_auth_image.jpg"
+                src="../images/thosam_auth_image.webp"
                 mr={2}
               />
               <Text fontSize="sm" color={textColor[colorMode]}>

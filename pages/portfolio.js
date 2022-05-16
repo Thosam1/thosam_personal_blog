@@ -132,7 +132,7 @@ const Portfolio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.7 }}
               >
-                <ChakraNextImage src={"/images/thosam_auth_image.jpg"} h="600px" minW="400px" maxW="450px" objectFit="cover" alt="me :)"/>
+                <ChakraNextImage src={"/images/thosam_auth_image.webp"} h="600px" minW="400px" maxW="450px" objectFit="cover" alt="me :)"/>
               </motion.div>
             </Box>
           </Flex>

@@ -34,7 +34,7 @@ const SkillCard = ({ name, image, link, description }) => {
             right={0}
             opacity={0.25}
           ></Box>
-          <Image alt={image} src={image} height={26} width={26} />
+          <Image alt={image} src={image} height={26} width={26} h={26} w={26} style />
         </Box>
         <VStack
           align="start"
