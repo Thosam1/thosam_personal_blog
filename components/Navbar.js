@@ -22,9 +22,6 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 // for links in Navbar
 import NextLink from "next/link";
 
-// used for navbar
-import styled from "@emotion/styled";
-
 // darkmode switch component in the navbar -> since it will be shown in every page
 import DarkModeSwitch from "./DarkModeSwitch";
 
@@ -48,15 +45,6 @@ const Navbar = () => {
     light: "gray.100",
     dark: "gray.700",
   };
-
-  // building our navbar
-  const StickyNav = styled(Flex)`
-    /* position: sticky; */
-    z-index: 10;
-    top: 0;
-    /* backdrop-filter: saturate(180%) blur(20px); */
-    transition: height 0.5s, line-height 0.5s;
-  `;
 
   const DesktopVersion = () => {
     return (
@@ -196,14 +184,10 @@ const Navbar = () => {
   };
 
   return (
-    <motion.div
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
+    <>
       <DesktopVersion />
       <MobileVersion />
-    </motion.div>
+    </>
   );
 };
 

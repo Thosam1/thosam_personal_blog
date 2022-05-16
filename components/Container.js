@@ -46,9 +46,7 @@ const Container = ({ children }) => {
         <Flex px={4} flexDir="column" minH="90vh">
           {children}
         </Flex>
-        <FadeInWrapper>
-          <Newsletter />
-        </FadeInWrapper>
+        <Newsletter />
 
         {/* button scroll back to top */}
         <ScrollTopButton />

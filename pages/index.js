@@ -24,7 +24,7 @@ import { motion } from "framer-motion";
 // SEO
 import { NextSeo } from "next-seo";
 
-const url = 'https://thosam.vercel.app/'
+const url = "https://thosam.vercel.app/";
 const title = "Thösam Norlha-Tsang";
 const description =
   "Software Engineer, AI enthusiast and Video Creator. This is my personal website where you can read my articles and have a look at my portfolio - Have fun !";
@@ -38,7 +38,7 @@ const SEO = {
   openGraph: {
     title,
     description,
-    url
+    url,
   },
 };
 
@@ -95,11 +95,7 @@ export default function Index() {
 
             <Stack direction={"row"} align={"center"}>
               <Link href="/portfolio" title="portfolio">
-                <Button
-                  mt={5}
-                >
-                  My works 💻
-                </Button>
+                <Button mt={5}>My works 💻</Button>
               </Link>
             </Stack>
           </Flex>
@@ -167,10 +163,7 @@ export default function Index() {
               </Text>
 
               <Link href="/about">
-                <Button
-                  mt={5}
-                  mb={10}
-                >
+                <Button mt={5} mb={10}>
                   More about me 😁
                 </Button>
               </Link>
@@ -192,12 +185,9 @@ export default function Index() {
               <ProjectCards featured={true} />
 
               <Link href="/portfolio">
-              <Button
-                mt={5}
-                mb={10}
-              >
-                Wanna see more ? 😄
-              </Button>
+                <Button mt={5} mb={10}>
+                  Wanna see more ? 😄
+                </Button>
               </Link>
             </Box>
           </Flex>
