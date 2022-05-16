@@ -1,9 +1,9 @@
-import { motion, LazyMotion, domAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 // wrapper for fade in animation
 export const FadeInWrapper = ({ children }) => {
   return (
-    <LazyMotion features={domAnimation}>
+
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -16,7 +16,7 @@ export const FadeInWrapper = ({ children }) => {
       >
         {children}
       </motion.div>
-    </LazyMotion>
+
   );
 };
 

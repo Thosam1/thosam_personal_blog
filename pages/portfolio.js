@@ -1,6 +1,5 @@
 /* Portfolio - page */
 import Head from "next/head";
-import Image from "next/image";
 
 import { useEffect } from "react";
 
@@ -16,7 +15,6 @@ import {
   Link,
   useColorModeValue,
   Icon,
-  // Image,
 } from "@chakra-ui/react";
 
 import { ChakraNextImage } from "../components/ChakraNextImage";
@@ -135,15 +133,6 @@ const Portfolio = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.7 }}
               >
-                {/* <Box position="relative" maxH="600px">
-                  <Image
-                    src={"/images/thosam_auth_image.jpg"}
-                    style={{ borderRadius: 10 }}
-                    // maxH="600px"
-                    // objectFit="cover"
-                    alt="me :)"
-                  />
-                </Box> */}
                 <ChakraNextImage src={"/images/thosam_auth_image.jpg"} h="600px" minW="400px" maxW="450px" objectFit="cover" alt="me :)"/>
               </motion.div>
             </Box>
