@@ -31,7 +31,7 @@ const ProjectCards = ({ featured }) => {
           return;
         }
         return (
-          // <FadeInWrapper key={object.title}>
+          <FadeInWrapper key={object.title}>
             <ProjectCard
               key={object.title}
               title={object.title}
@@ -43,7 +43,7 @@ const ProjectCards = ({ featured }) => {
               images={object.images}
               //   link={tool.link}
             />
-          // </FadeInWrapper>
+          </FadeInWrapper>
         );
       })}
     </SimpleGrid>
