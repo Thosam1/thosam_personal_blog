@@ -18,7 +18,7 @@ const ScrollTopButton = () => {
       setScrollPosition(window.pageYOffset);
     };
 
-    window.addEventListener("scroll", updatePosition);
+    window.addEventListener("scroll", updatePosition, {passive: true});
 
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);

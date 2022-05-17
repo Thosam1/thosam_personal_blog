@@ -63,7 +63,7 @@ const Portfolio = () => {
         document.querySelector(this.getAttribute("href")).scrollIntoView({
           behavior: "smooth",
         });
-      });
+      }, {passive: true});
     });
   });
 
