@@ -151,7 +151,6 @@ const About = () => {
                   ml={4}
                   src={"/images/thosam_auth_image.webp"}
                   h="600px"
-                  minW="400px"
                   maxW="450px"
                   objectFit="cover"
                   alt="me :)"
