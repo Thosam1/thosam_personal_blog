@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
         <ColorModeProvider
           options={{
             initialColorMode: "dark",
-            useSystemColorMode: true,
+            useSystemColorMode: false,
           }}
         >
           <GlobalStyle>
