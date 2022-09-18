@@ -121,6 +121,17 @@ const About = () => {
                 create a full immersive experience of the real world, where we
                 would just lay down on a bed and be able to run, jump, and
                 battle with swords.
+                <br />
+                Now many things in life led me to think more deeply about the human nature and the meaning of life. After studying Buddhism, I realized how little I knew about myself and how ignorant I were spiritually and philosophically. Currently I am striving to become a great software engineer that can help solve world issues and make this world a better place for all living creatures. In my spiritual journey, I will put a few updates that you can find 
+                {" "}
+                <Link
+                  color="blue.500"
+                  href="/blog"
+                  isExternal
+                >
+                  here
+                </Link>{" "}
+                on my blog page. 
               </Text>
 
               <Stack direction={"row"} align={"center"}>
