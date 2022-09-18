@@ -1,6 +1,22 @@
 export default function projectsList() {
     return [
         {
+            title: 'TalkZone - for university students',
+            description: "Coded a social network application (with a friend) for my own and neighbor universities. Allowing students to express themselves about courses and campus life. Frontend coded in VueJS and backend in Java Spring.",
+            githubLink: 'https://github.com/talkzone-ch',
+            demoLink: 'https://talkzone.ch/',
+            domainName: 'talkzone.ch',
+            tags: [
+                'WebDev',
+                'VueJs',
+                'Java Spring'
+            ],
+            images: [
+                '/images/projects/talkzone_image.png'
+            ],
+            featured: true
+        },
+        {
             title: 'E-commerce web app',
             description: 'E-commerce platform made using React and the main goal was to learn about React and GraphQL. Supports stripe payments, Firebase Auth and Firestore.',
             githubLink: 'https://github.com/Thosam1/megaBigE_commerceWebApp',
