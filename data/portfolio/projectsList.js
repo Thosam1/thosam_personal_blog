@@ -2,7 +2,7 @@ export default function projectsList() {
     return [
         {
             title: 'TalkZone - for university students',
-            description: "Coded a social network application (with a friend) for my own and neighbor universities. Allowing students to express themselves about courses and campus life. Frontend coded in VueJS and backend in Java Spring.",
+            description: "Coded a social network application (with a friend) for our own and neighboring universities. Allowing students to express themselves about courses and campus life. Frontend coded in VueJS and backend in Java Spring.",
             githubLink: 'https://github.com/talkzone-ch',
             demoLink: 'https://talkzone.ch/',
             domainName: 'talkzone.ch',
