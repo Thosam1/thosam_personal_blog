@@ -9,6 +9,7 @@ import BA1List from "../data/portfolio/education/BA1List";
 import BA2List from "../data/portfolio/education/BA2List";
 import BA3List from "../data/portfolio/education/BA3List";
 import BA4List from "../data/portfolio/education/BA4List";
+import BA5List from "../data/portfolio/education/BA5List";
 
 const correctList = (semester) => {
   switch (semester) {
@@ -20,6 +21,8 @@ const correctList = (semester) => {
       return BA3List();
     case "4":
       return BA4List();
+    case "5":
+      return BA5List();
     default:
       return BA1List();
   }

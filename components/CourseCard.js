@@ -21,6 +21,12 @@ const chooseColor = (type) => {
       return "yellow.300";
     case "HUM":
       return "red.300";
+    case "MGT":
+      return "cyan.300";
+    case "BIO":
+      return "teal.300";  
+    case "CH":
+      return "pink.300";   
     default:
       return "white";
   }

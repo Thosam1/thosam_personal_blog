@@ -26,7 +26,7 @@ import { NextSeo } from "next-seo";
 import { FadeInWrapper } from "../components/FadeInWrapper";
 
 const url = "https://thosam.vercel.app/blog";
-const title = "Blog - Thösam Norlha-Tsang";
+const title = "Blog with articles - Thösam Norlha-Tsang";
 const description =
   "My blog page where you can learn from my experience and read interesting articles !";
 

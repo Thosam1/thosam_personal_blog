@@ -17,7 +17,7 @@ export default function Blog({ mdxSource, frontMatter }) {
 
   const url = `https://thosam.vercel.app/blog${slug}`
   const title = `Blog - ${frontMatter.title}`;
-  const description = `${frontMatter.title} - by Thösam Norlha-Tsang`;
+  const description = `${frontMatter.summary} - by Thösam Norlha-Tsang`;
 
   // overriding SEO
   const SEO = {
