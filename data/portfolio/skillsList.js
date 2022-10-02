@@ -15,6 +15,13 @@ export default function skillsList() {
           image: '/images/skills/redux.png'
         },
         {
+          name: 'Vue',
+          description: 'Web development',
+          link: 'https://vuejs.org/',
+          type: 'development',
+          image: '/images/skills/vue.png'
+        },
+        {
           name: 'Java',
           description: 'Competitive Programming, Desktop Applications, Server',
           link: 'https://www.java.com/en/',
