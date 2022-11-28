@@ -64,7 +64,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <DefaultSeo {...SEO} />
       <ChakraProvider resetCSS theme={customTheme}>
-        <ColorModeProvider>
+        <ColorModeProvider
+          options={{
+            initialColorMode: "dark",
+            useSystemColorMode: true,
+          }}
+        >
           <GlobalStyle>
             <Component {...pageProps} />
           </GlobalStyle>
