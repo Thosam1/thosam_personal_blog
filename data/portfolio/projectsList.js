@@ -17,31 +17,18 @@ export default function projectsList() {
             featured: true
         },
         {
-            title: 'E-commerce web app',
-            description: 'E-commerce platform made using React and the main goal was to learn about React and GraphQL. Supports stripe payments, Firebase Auth and Firestore.',
-            githubLink: 'https://github.com/Thosam1/megaBigE_commerceWebApp',
-            demoLink: 'https://ecom-clothes-portfolio-project.herokuapp.com/',
-            domainName: 'thosam-norlha-portfolio.netlify.app',
-            tags: [
-                'WebDev',
-                'React'
-            ],
-            images: [
-                '/images/projects/ecommerce_image.png',
-            ],
-            featured: false
-        },
-        {
-            title: 'Pacman - Save PacWoman',
-            description: 'Pacman variant made during my first year as a CS student at EPFL, it has 3 levels and the difficulty is insanely hard.',
-            githubLink: 'https://github.com/Thosam1/Pacman_MP2/tree/main/CS07-MP2-2020-V2',
-            demoLink: '',
+            title: 'ConnectOut',
+            description: "Connect Out is a social activity platform that enables users to join and discover new activities based on their interests. It fosters social interaction and community engagement, making it easier to meet like-minded people and discover new hobbies. ",
+            githubLink: 'https://github.com/ConnectOut-sdp/sdp2023',
+            demoLink: 'https://www.youtube.com/watch?v=Oil0FFvZltE',
             domainName: '',
             tags: [
-                'Java',
+                'Mobile',
+                'Android',
+                'Java'
             ],
             images: [
-                '/images/projects/pacman_lv2.png',
+                '/images/projects/connect_out.png'
             ],
             featured: true
         },
@@ -58,6 +45,66 @@ export default function projectsList() {
                 '/images/projects/tchu_image.png',
             ],
             featured: true
+        },
+        {
+            title: 'Pacman - Save PacWoman',
+            description: 'Pacman variant made during my first year as a CS student at EPFL, it has 3 levels and the difficulty is insanely hard.',
+            githubLink: 'https://github.com/Thosam1/Pacman_MP2/tree/main/CS07-MP2-2020-V2',
+            demoLink: '',
+            domainName: '',
+            tags: [
+                'Java',
+            ],
+            images: [
+                '/images/projects/pacman_lv2.png',
+            ],
+            featured: true
+        },
+        {
+            title: 'Water Simulation',
+            description: 'A project coded from scratch for our Introduction to Computer Graphics class that simulates water using ThreeJS.',
+            githubLink: 'https://github.com/MikaelKalajdzic/watersim/tree/master',
+            demoLink: 'https://www.youtube.com/watch?v=EFDqDePbHUw',
+            domainName: '',
+            tags: [
+                'ThreeJS',
+                'GLSL',
+                "Javascript"
+            ],
+            images: [
+                '/images/projects/water_simulation.png',
+            ],
+            featured: true
+        },
+        {
+            title: 'Personal Web App 🔥',
+            description: "Current website made using Next.js and Chakra UI, merged my portfolio and my blog in a single place. Exporting my Notion blog articles into MDX is much more time efficient. Spent a lot of time thinking about how to write efficient code.",
+            githubLink: 'https://github.com/Thosam1/thosam_personal_blog',
+            demoLink: 'https://thosam.vercel.app/',
+            domainName: 'thosam.vercel.app',
+            tags: [
+                'WebDev',
+                'NextJs'
+            ],
+            images: [
+                '/images/projects/bg_personal_website.png'
+            ],
+            featured: false
+        },
+        {
+            title: 'E-commerce web app',
+            description: 'E-commerce platform made using React and the main goal was to learn about React and GraphQL. Supports stripe payments, Firebase Auth and Firestore.',
+            githubLink: 'https://github.com/Thosam1/megaBigE_commerceWebApp',
+            demoLink: 'https://ecom-clothes-portfolio-project.herokuapp.com/',
+            domainName: 'thosam-norlha-portfolio.netlify.app',
+            tags: [
+                'WebDev',
+                'React'
+            ],
+            images: [
+                '/images/projects/ecommerce_image.png',
+            ],
+            featured: false
         },
         {
             title: 'First Portfolio Website',
@@ -86,21 +133,6 @@ export default function projectsList() {
             ],
             images: [
                 '/images/projects/first_blog.png',
-            ],
-            featured: false
-        },
-        {
-            title: 'Personal Web App 🔥',
-            description: "Current website made using Next.js and Chakra UI, merged my portfolio and my blog in a single place. Exporting my Notion blog articles into MDX is much more time efficient. Spent a lot of time thinking about how to write efficient code.",
-            githubLink: 'https://github.com/Thosam1/thosam_personal_blog',
-            demoLink: 'https://thosam.vercel.app/',
-            domainName: 'thosam.vercel.app',
-            tags: [
-                'WebDev',
-                'NextJs'
-            ],
-            images: [
-                '/images/projects/bg_personal_website.png'
             ],
             featured: false
         },
