@@ -1,32 +1,81 @@
 export default function skillsList() {
     return [
         {
+          name: 'Java',
+          description: 'Desktop Applications, Backend Development, Android Development',
+          link: 'https://www.java.com/en/',
+          type: 'development',
+          image: '/images/skills/java.png'
+        },
+        {
+          name: 'Python',
+          description: 'Data Science, Research',
+          link: 'https://www.python.org/',
+          type: 'development',
+          image: '/images/skills/python.png'
+        },
+        {
+          name: 'Javascript',
+          description: 'Web development (full-stack), Mobile development (full-stack)',
+          link: '',
+          type: 'development',
+          image: '/images/skills/javascript.png'
+        },
+        {
+          name: 'Typescript',
+          description: 'Web development (full-stack), Mobile development (full-stack)',
+          link: '',
+          type: 'development',
+          image: '/images/skills/typescript.png'
+        },
+        {
           name: 'React',
-          description: 'Web development',
+          description: 'Web development (front-end)',
           link: 'https://reactjs.org/',
           type: 'development',
           image: '/images/skills/react.png'
         },
         {
+          name: 'React Native',
+          description: 'Mobie Development (front-end)',
+          link: 'https://reactnative.dev',
+          type: 'development',
+          image: '/images/skills/react.png'
+        },
+        {
           name: 'Redux',
-          description: 'Web development',
+          description: 'Web development (front-end)',
           link: 'https://reactjs.org/',
           type: 'development',
           image: '/images/skills/redux.png'
         },
         {
           name: 'Vue',
-          description: 'Web development',
+          description: 'Web development (front-end)',
           link: 'https://vuejs.org/',
           type: 'development',
           image: '/images/skills/vue.png'
         },
         {
-          name: 'Java',
-          description: 'Competitive Programming, Desktop Applications, Server',
-          link: 'https://www.java.com/en/',
+          name: 'MongoDB',
+          description: 'Web development (backend)',
+          link: '',
           type: 'development',
-          image: '/images/skills/java.png'
+          image: '/images/skills/mongo_db.png'
+        },
+        {
+          name: 'SQL',
+          description: 'Web development (backend)',
+          link: '',
+          type: 'development',
+          image: '/images/skills/sql.png'
+        },
+        {
+          name: 'Node',
+          description: 'Web development (backend), using typescript',
+          link: '',
+          type: 'development',
+          image: '/images/skills/node_js.png'
         },
         {
           name: 'Scala',
@@ -34,13 +83,6 @@ export default function skillsList() {
           link: 'https://www.python.org/',
           type: 'development',
           image: '/images/skills/scala.png'
-        },
-        {
-          name: 'Python',
-          description: 'Data Science, Deep Learning, Research, Kaggle',
-          link: 'https://www.python.org/',
-          type: 'development',
-          image: '/images/skills/python.png'
         },
         {
           name: 'Git',

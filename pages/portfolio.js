@@ -357,6 +357,20 @@ const Portfolio = () => {
                 </Heading>
               </FadeInWrapper>
               <CourseCards semester={"5"} />
+
+              <FadeInWrapper>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="md"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  EPFL - Year 3 - Semester 2
+                </Heading>
+              </FadeInWrapper>
+              <CourseCards semester={"6"} />
             </Box>
 
             {/* Contact Me */}
