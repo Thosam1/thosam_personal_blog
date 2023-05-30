@@ -33,30 +33,18 @@ export default function projectsList() {
             featured: true
         },
         {
-            title: 'Tchu',
-            description: 'A project made during my first year as a CS student. This one took a whole semester, more than 200 hours. It is a game played by 2 players through a network connection.',
-            githubLink: 'https://github.com/Thosam1/tCHu_projetBA2',
+            title: 'Bandits Algorithms For Recommendation Systems',
+            description: "Bachelor/research project in the field of recommendation systems.",
+            githubLink: 'https://github.com/Thosam1/BachelorProject',
             demoLink: '',
             domainName: '',
             tags: [
-                'Java',
+                'Python',
+                'Data Science',
+                'Research'
             ],
             images: [
-                '/images/projects/tchu_image.png',
-            ],
-            featured: true
-        },
-        {
-            title: 'Pacman - Save PacWoman',
-            description: 'Pacman variant made during my first year as a CS student at EPFL, it has 3 levels and the difficulty is insanely hard.',
-            githubLink: 'https://github.com/Thosam1/Pacman_MP2/tree/main/CS07-MP2-2020-V2',
-            demoLink: '',
-            domainName: '',
-            tags: [
-                'Java',
-            ],
-            images: [
-                '/images/projects/pacman_lv2.png',
+                '/images/projects/bachelor_project.png'
             ],
             featured: true
         },
@@ -77,8 +65,68 @@ export default function projectsList() {
             featured: true
         },
         {
+            title: 'Tchu',
+            description: 'A project made during my first year as a CS student (over 200h). It is a game played by 2 players through a network connection.',
+            githubLink: 'https://github.com/Thosam1/tCHu_projetBA2',
+            demoLink: '',
+            domainName: '',
+            tags: [
+                'Java',
+            ],
+            images: [
+                '/images/projects/tchu_image.png',
+            ],
+            featured: false
+        },
+        {
+            title: 'Pacman - Save PacWoman',
+            description: 'Pacman variant made during my first year as a CS student at EPFL, it has 3 levels and the difficulty is insanely hard.',
+            githubLink: 'https://github.com/Thosam1/Pacman_MP2/tree/main/CS07-MP2-2020-V2',
+            demoLink: '',
+            domainName: '',
+            tags: [
+                'Java',
+            ],
+            images: [
+                '/images/projects/pacman_lv2.png',
+            ],
+            featured: false
+        },
+        {
+            title: 'UniHousing - Front_end',
+            description: 'A mobile application built using react native with expo cli and typescript. The mission of this project is to allow students to sublet their rooms during holidays.',
+            githubLink: 'https://github.com/Thosam1/UniHousing',
+            demoLink: '',
+            domainName: '',
+            tags: [
+                'React Native',
+                'Typescript',
+                "Expo"
+            ],
+            images: [
+                '/images/projects/uni_housing.jpg',
+            ],
+            featured: false
+        },
+        {
+            title: 'UniHousing - Backend',
+            description: 'A backend coded using typescript, node and mongoDb in order to dive into backend developement.',
+            githubLink: 'https://github.com/Thosam1/uni_housing_backend',
+            demoLink: '',
+            domainName: '',
+            tags: [
+                'NodeJS',
+                'Typescript',
+                "MongoDB"
+            ],
+            images: [
+                '/images/projects/uni_housing.jpg',
+            ],
+            featured: false
+        },
+        {
             title: 'Personal Web App 🔥',
-            description: "Current website made using Next.js and Chakra UI, merged my portfolio and my blog in a single place. Exporting my Notion blog articles into MDX is much more time efficient. Spent a lot of time thinking about how to write efficient code.",
+            description: "Current website made using Next.js and Chakra UI, merged my portfolio and my blog in a single place.",
             githubLink: 'https://github.com/Thosam1/thosam_personal_blog',
             demoLink: 'https://thosam.vercel.app/',
             domainName: 'thosam.vercel.app',
@@ -95,7 +143,7 @@ export default function projectsList() {
             title: 'E-commerce web app',
             description: 'E-commerce platform made using React and the main goal was to learn about React and GraphQL. Supports stripe payments, Firebase Auth and Firestore.',
             githubLink: 'https://github.com/Thosam1/megaBigE_commerceWebApp',
-            demoLink: 'https://ecom-clothes-portfolio-project.herokuapp.com/',
+            demoLink: '',
             domainName: 'thosam-norlha-portfolio.netlify.app',
             tags: [
                 'WebDev',
