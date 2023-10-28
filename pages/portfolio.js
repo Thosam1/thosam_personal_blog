@@ -371,6 +371,33 @@ const Portfolio = () => {
                 </Heading>
               </FadeInWrapper>
               <CourseCards semester={"6"} />
+
+              <FadeInWrapper>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="lg"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7}
+                >
+                  ETHZ - Master of Computer Science
+                </Heading>
+              </FadeInWrapper>
+
+              <FadeInWrapper>
+                <Heading
+                  letterSpacing="tight"
+                  mt={8}
+                  size="md"
+                  fontWeight={700}
+                  as="h2"
+                  mb={7} 
+                >
+                  ETHZ - Year 1 - Semester 1
+                </Heading>
+              </FadeInWrapper>
+              <CourseCards semester={"7"} />
             </Box>
 
             {/* Contact Me */}
