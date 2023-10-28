@@ -1,4 +1,4 @@
-export default function BA6List() {
+export default function MA1List() {
     return [
         {
             name: "Big Data",
