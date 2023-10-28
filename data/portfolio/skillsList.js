@@ -37,7 +37,7 @@ export default function skillsList() {
         },
         {
           name: 'React Native',
-          description: 'Mobie Development (front-end)',
+          description: 'Mobile Development (front-end)',
           link: 'https://reactnative.dev',
           type: 'development',
           image: '/images/skills/react.png'
