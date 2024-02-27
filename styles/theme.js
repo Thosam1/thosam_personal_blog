@@ -23,6 +23,7 @@ const breakpoints = createBreakpoints({
 const overrides = {
   ...chakraTheme,
   initialColorMode: 'dark', // i don't think this works...
+  useSystemColorMode: false,
   fonts,
   breakpoints,
   fontWeights: {
