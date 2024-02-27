@@ -64,7 +64,7 @@ const overrides = {
 };
 
 // we will export what we have overriden as customTheme
-const customTheme = extendTheme(overrides);
+const customTheme = extendTheme({ overrides });
 
 // exporting our customTheme
 export default customTheme;
