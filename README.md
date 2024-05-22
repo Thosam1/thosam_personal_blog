@@ -5,7 +5,7 @@
 Welcome to my personal website! This website serves as a platform to showcase my portfolio, skills, and projects. Whether you're a potential employer, collaborator, or just someone interested in learning more about me, you'll find all the relevant information here.
 
   <br />
-  <img src="./public/images/website_pic.png" alt="Website's thumbnail" width="780" height="450">
+  <img src="./public/images/website_pic.png" alt="Website's thumbnail" width="800" max-height="450">
   <br />
 
 </div>
